@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //将a1赋值给另外对象a2  它们指向同一个对象  不是复制
+		   var a1=[2,5,7,8];
+		   
+		   var a2=a1;
+		   console.log("a1=",a1.join(","));
+		   console.log("a2=",a2.join(","))
+		   //对a2更改
+		   a2[0]=10;
+		   a1[1]=34;
+		   console.log("a1=",a1.join(","));
+		   console.log("a2=",a2.join(","))
+		   
+		</script>
+	</body>
+</html>

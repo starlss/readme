@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		  function Product(name, price) {
+		    this.name = name;
+		    this.price = price;
+			//this.info=function(){}
+		  }
+		  
+		  function Food(name, price) {
+		    Product.call(this, name, price);
+		    this.category = 'food';
+		  }
+		  
+		  function Toy(name, price) {
+		    Product.call(this, name, price);
+		    this.category = 'toy';
+		  }
+		  
+		  var cheese = new Food('feta', 5);
+		  
+		  console.log(cheese)
+		  
+		  var fun = new Toy('robot', 40);
+		  
+		  
+		  // 對象繼承屬性
+		  
+		</script>
+	</body>
+</html>

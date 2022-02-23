@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   table{
+			   width: 80%;
+			   margin: auto;
+			   background-color: #666;
+		   }
+		   
+		   tr{
+			   line-height: 40px;
+			   background-color: #fff;
+		   }
+		   .header{
+			   background-color: #eee;
+		   }
+		   td,th{
+			   font-size: 12px;
+		   }
+		</style>
+	</head>
+	<body>
+
+
+		<table border="0" cellpadding="0" cellspacing="1">
+			<!--第一行  -->
+			<tr class="header">
+				<!--表头-->
+				<th>序号</th>
+				<th>产品名称</th>
+				<th>所属类别</th>
+				<th>价格</th>
+			</tr>
+          <!--
+		    合并第二行、第三行  的第一列
+		  -->
+			<tr>
+				<td rowspan="2">1</td>
+				<td>华为手机 </td>
+				<td>手机</td>
+				<td>1999</td>
+			</tr>
+			<tr>
+				<td>华为手机 </td>
+				<td>手机</td>
+				<td>1999</td>
+			</tr>
+			<!--列合并-->
+			<tr>
+				<td>3</td>
+				<td     colspan="3">华为手机 </td>
+			</tr>
+			
+
+		</table>
+	</body>
+</html>

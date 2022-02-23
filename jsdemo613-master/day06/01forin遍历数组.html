@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var score=[23,56,78,15,"hello"];
+            //数组  它是一个变量 多个值  通过下标来访问  下标从0开始   下标
+            //的最大值是数组的长度-1  score[1]=56
+            
+            for(var i=0;i<score.length;i++){
+                console.log(score[i]);
+            }
+            
+            console.log("----------------")
+            
+            //for in 在遍历数组时  变量的值是数组的下标 (索引) 
+            for(var i in score){
+                console.log(score[i])
+            }
+            
+        </script>
+    </body>
+</html>

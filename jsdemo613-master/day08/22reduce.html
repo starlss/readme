@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+         var score=[78,65,98,56,64,30];
+         //計算出平均成績
+        var tmp=  score.reduce(function(rs,s){
+             return rs+=s;
+         })
+         
+         console.log(tmp/score.length)
+         
+         //計算1~10的階乘
+         var jc=[];
+        /* for(var i=1;i<=10;i++){
+             jc[--i]=i;
+         }*/
+         for(var i=0;i<10;i++){
+             jc[i]=i+1;
+         }
+         var rs=jc.reduceRight(function(result,n){
+             return result*=n;
+         })
+         console.log(rs)
+         
+         
+         
+        </script>
+    </body>
+</html>

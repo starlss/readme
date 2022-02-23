@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>window</title>
+	</head>
+	<body>
+		
+		名称:<input type="text" />
+		
+		测试移动
+		<input type="button" value="打开" onclick="test()" />
+		<input type="button" value="获取焦点" onclick="f1()" />
+		<script>
+		    var tmp;
+		    function test(){
+				//tmp=window.open('12moveby移动窗口.html','打开窗口','width=400,height=400,left=300,top=100');
+				
+				window.open('12moveby移动窗口.html','打开窗口','width=400,height=400,menubar=1,toolbar=yes');
+				console.log(tmp)
+			}
+			
+			function f1(){
+				console.log("-----------")
+				tmp.focus();
+				//5s后自动失败焦点
+				setTimeout(function(){
+					console.log(">>>>>",tmp)
+					tmp.blur();
+				},5000);
+			}
+		</script>
+	</body>
+</html>

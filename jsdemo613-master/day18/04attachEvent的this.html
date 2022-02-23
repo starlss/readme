@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="thisֵ"/>
+		<script>
+		     var btn=document.getElementById("btn");
+			 btn.attachEvent("onclick",function(){
+				 console.log("el>>>",this === window)
+			 })
+			 function test(){
+				 test.call(btn)
+			 }
+		</script>
+	</body>
+</html>

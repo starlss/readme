@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var info=navigator.userAgent;
+		   console.log(info)
+		   //判断当前设备
+		   if(info.indexOf('Windows')>0){
+			   console.log("window系统")
+		   }else if(info.indexOf("Android")>0){
+			   console.log("android系统")
+		   }else if(info.indexOf("iPhone")>0){
+			   console.log("iPhone系统")
+		   }else if(info.indexOf("iPad")>0){
+			   console.log("ipad")
+		   }else{
+			   console.log("其它设备")
+		   }
+		   
+		   
+		   //判断浏览器类型 
+		   if(info.indexOf("Chrome")>0){
+			   console.log("chrome浏览器")
+		   }else if(info.indexOf("Firefox")){
+			   console.log("火狐浏览器")
+		   }
+		</script>
+	</body>
+</html>

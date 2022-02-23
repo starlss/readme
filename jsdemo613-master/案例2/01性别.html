@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   img{
+			   width: 20px;
+			   height: 20px;
+			   vertical-align: middle;
+			   margin-right: 5px;
+			   cursor: pointer;
+		   }
+		</style>
+	</head>
+	<body>
+		性别:
+		<img src="images/check.png" name="gender" id="1" />男
+		<img src="images/uncheck.png"  name="gender" id="2"/>女
+		<img src="images/uncheck.png" name="gender"  id="3" />保密
+		<br /><br />
+		<input type="button" value="保存" onclick="save()" />
+		
+		<script>
+		    
+			  //保存 
+			  function save(){
+				  //获取所有单选按钮 
+				  var arr=document.getElementsByName("gender");
+				  for(var i=0;i<arr.length;i++){
+					  var tmp=arr[i];
+					  if(tmp.src.indexOf("images/check.png")>=0){
+						  console.log("性别:",tmp.id);
+						  break;//中止循环
+					  }
+				  }
+			  }
+		
+		    function init(){
+				//根据name获取所有性别
+				//var arr=document.getElementsByName("gender");
+				//根据元素获取
+				var arr=document.querySelectorAll("img");
+				//console.log(arr)
+				for(var i=0;i<arr.length;i++){
+					//获得单选图片
+					var tmp=arr[i];
+					//给每个图片增加事件
+					//切记不能用 sel()  这是调用方法的返回值赋值给onclick属性
+					tmp.onclick=sel;
+				}
+			}
+			
+			//图片点击执行
+			//event 事件对象  
+			function sel(event){
+				//获取点击的目标对象 
+				var obj=event.target;
+				//如果当前图片是选中状态   不做任何操作
+				if(obj.src.indexOf("images/check.png")>=0)
+				   return;  
+				//获取所有的单选
+				var arr=document.getElementsByName("gender");
+				for(var i=0;i<arr.length;i++){
+					//获取临时对象
+					var tmp=arr[i];
+					//如果当前点的图片正好是遍历的图片
+					if(obj==tmp){
+						//更改为选中状态
+						tmp.src="images/check.png";
+					}else{
+						//未选中状态
+						tmp.src="images/uncheck.png";
+					}
+				}
+			}
+			
+			
+			//调用 
+			init();
+		</script>
+	</body>
+</html>

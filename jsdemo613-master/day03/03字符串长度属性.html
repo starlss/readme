@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+       .tip{
+           position: relative;
+           left: -100px;
+           top:-20px;
+           color: #ccc;
+           font-size: 12px;
+       }
+    </style>
+</head>
+<body>
+     <!--  chg(this)  里的this是实际参数  实参-->
+     内容：<textarea rows="20" cols="100" resize="no" oninput="chg(this)"></textarea>
+     <span class="tip" id="info">可输入0/200</span>
+
+
+     <script>
+          // var str="hello";
+          // console.log(str.length)
+           
+           //obj是形式参数 （形参）
+           function chg(obj){
+               let val=obj.value;
+               //获取长度
+               let len=val.length;
+               //利用文档对象获取span元素 
+               //字符串和变量的连接  可以用 +  
+               document.getElementById("info").innerHTML="可输入"+len+"/200";
+           }
+     </script>
+</body>
+</html>

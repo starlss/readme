@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   function info(){
+			   console.log("------info")
+		   }
+		   
+		   var o={
+			   f:info,  //将函数info赋值给属性f
+		       f2:function(){}
+		   };
+		   
+		   o.f();
+		</script>
+	</body>
+</html>

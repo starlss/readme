@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+		    function login(){
+				let name=document.getElementById("username").value;
+				let hobby=document.getElementsByName("hobby");
+			    let tmp=document.getElementsByTagName("input");
+				console.log("hobby",hobby);
+				let rs=[];
+				for(var i=0;i<hobby.length;i++){
+					let o=hobby[i];
+					if(o.checked==true){
+						//获取值  放入数组 
+						rs.push(o.value)
+					}
+				}
+				console.log("爱好:",rs)
+				let ipt=document.getElementsByClassName("ipt");
+				console.log("ipt>>",ipt)
+				
+			 	document.querySelector("#username");
+			   let o= document.querySelectorAll("input");
+			  console.log("o===",o)
+			}
+		</script>
+	</head>
+	<body>
+		用户名:<input type="text" class="ipt" placeholder="请输入用户名" id="username" /><br>
+		密码:<input type="password" class="ipt" placeholder="请输入密码" /><br>
+		爱好：<input type="checkbox" value="打球" checked="checked" name="hobby" />打球
+		<input type="checkbox" value="玩游戏" name="hobby" />玩游戏
+		<input type="checkbox" value="看书" name="hobby" />看书<br>
+		
+		<input type="button" value="登录" onclick="login()" />
+	</body>
+</html>

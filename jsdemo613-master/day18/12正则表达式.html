@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //  reg就是RegExp类的对象  
+		   var reg=/./;
+		   var s="a";
+		   console.log(reg.test(s))
+		   
+		   // \d 代表任意数字   验证一个数字 
+		   reg=/\d/;
+		   s="3";
+		   console.log(s,reg.test(s))
+		   
+		   // \s 代表空格  
+		   reg=/\s/;
+		   s="	";
+		   console.log(reg.test(s))
+		   
+		   // \w 代表字母数字下划线
+		   reg=/\w/;
+		   console.log(reg.test("#"))
+		  
+		</script>
+	</body>
+</html>

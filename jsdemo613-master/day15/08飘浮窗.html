@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   body{
+			   margin: 0;
+		   }
+		   img{
+			   width: 100px;
+			   height: 100px;
+			   position: relative;
+			   left: 0;
+			   top: 0;
+		   }
+		</style>
+	</head>
+	<body>
+			<img src="images/1.jpg" />
+		
+		<script>
+		   ((function(){
+			   
+			   //获取 img对象
+			   var obj=document.querySelector("img")
+			  
+			  /* setTimeout(function(){
+				   obj.style.left="200px";
+			   },2000);*/
+			   
+			   var maxLeft=document.body.offsetWidth-obj.offsetWidth-1;
+			   console.log(maxLeft)
+			   
+			   var timer;
+			   
+			//  return;
+			   
+			 timer= setInterval(function(){
+				 
+				   if(obj.offsetLeft>=maxLeft){
+					   //清除定时器
+					   console.log(">>>",obj.offsetLeft,maxLeft)
+					   clearInterval(timer);
+				   }
+				 
+				   var tmp=obj.style.left;
+				   if(!tmp){
+					   tmp=0;
+				   }else{
+					   tmp=tmp.substring(0,tmp.length-2);
+					   tmp=parseInt(tmp);
+				   }
+				    tmp+=1;
+				    obj.style.left=tmp+"px";
+			   },1);
+			   
+			   console.log(obj.offsetParent)
+			   console.log(obj.offsetLeft)
+			   console.log(obj.offsetTop)
+			   
+		   })());
+		</script>
+	</body>
+</html>

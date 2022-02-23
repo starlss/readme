@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="05back.html">查看回退功能</a>
+         <a href="javascript:void history.forward()">前進</a>
+		 <a href="javascript:void history.go(1)">go</a>
+		 <a href="javascript:void history.go(-1)">goback</a>
+		<script>
+		console.log("self:",window.self)
+		console.log("parent",window.parent)
+		     console.log("state",history.state)
+		    console.log(window.navigator)
+			//获取剪切板 
+			var cp=window.navigator.clipboard;
+			//获取剪切板内容 
+			/*cp.readText().then(function(data){
+				console.log("data==",data)
+			})*/
+			
+			//向剪切板设置内容 
+			//console.log(cp.writeText.toString())
+			cp.writeText("sssss232332ss").catch(e=>{
+				console.log(e)
+			})
+			
+			
+			/*cp.read().then(function(data){
+				console.log(data)
+			});*/
+		</script>
+	</body>
+</html>

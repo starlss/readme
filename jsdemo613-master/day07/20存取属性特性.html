@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var obj={
+               get x(){
+                   return  this._x;
+               },
+               set x(nv){
+                   this._x=nv;
+               }
+           };
+           
+           console.log(Object.getOwnPropertyDescriptor(obj,'x'))
+       
+        //给obj增加一个属性y 
+        Object.defineProperty(obj,"y",{value:35})
+       
+       
+       console.log(obj.y)
+       
+        </script>
+    </body>
+</html>

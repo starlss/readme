@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+        
+        
+           var obj={
+               x:undefined,
+               y:89
+           };
+           
+           var o2=Object.create(obj);
+           o2.z=13;
+           
+           console.log("x" in obj)
+           console.log("z" in obj)
+           
+           console.log(o2)
+           console.log("z" in o2)
+           
+           //检测o2自身属性
+           console.log(o2.hasOwnProperty("z"))
+           //检测o2继承属性 
+            console.log(o2.hasOwnProperty("x"))
+            
+            console.log(o2.propertyIsEnumerable("z"))
+             console.log("y",o2.propertyIsEnumerable("y"))
+           
+           //枚举属性 
+           for(var o3 in o2){
+               console.log(o3)
+           }
+           
+           console.log("-------")
+           
+           console.log(o2.z!==undefined)
+           console.log(o2.y!==undefined)
+           
+        </script>
+    </body>
+</html>

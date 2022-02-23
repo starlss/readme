@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+        // "use strict";
+         
+           var obj={}; //空对象 
+           //添加属性
+           obj.x=23;
+           obj.y=12;
+           console.log(obj)
+           //更改属性
+           obj.x=100;
+           console.log(obj)
+           
+           //删除属性 
+           //利用.运算符删除属性 
+           delete obj.x;  
+           console.log(obj)
+           //利用[]运算符  删除属性 
+        //   delete obj["y"];
+           console.log(obj)
+           
+           //利用obj做为原型 创建新的对象 
+           var o2=Object.create(obj);
+           o2.name="lily";
+           
+           
+           //访问继承属性 
+           console.log(o2.y)
+           
+           //删除继承属性 
+           delete o2.y;
+           
+           console.log(o2.y)
+           
+           
+           //删除全局属性 
+           
+          /* var age=12; 
+           console.log("age",window.age)
+           delete window.age;
+            console.log("age",window.age)
+            console.log(this.age)*/
+            
+           
+            
+           var age =34;
+            console.log(this.age)
+            delete this.age;
+            console.log(this.age)
+        
+           
+        </script>
+    </body>
+</html>

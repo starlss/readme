@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			书籍列表<br/><ul>
+			   <li>html</li>	
+			    <li>css</li>	
+				 <li>js</li>	
+			<ul>
+		</div>
+		<div>
+			&gt;
+			<![CDATA[  >  ]]>
+		</div>
+		
+		<script>
+		    //获取div元素
+			var root=document.querySelector("div");
+			console.log(root)
+			//获取子节点
+			var childs=root.childNodes;
+			console.log(childs)
+			//遍历
+			childs=Array.from(childs);
+			childs.forEach(function(c){
+				console.log(">>>>",c.nodeName,c.nodeValue,c.nodeType==Node.ELEMENT_NODE)
+			})
+			
+			console.log("root第一个节点:",root.firstChild)
+		
+		    console.log("root最后一个节点:",root.lastChild)
+		
+		    var first=root.firstChild;
+			console.log(first.nextSibling)
+			
+			var last=root.lastChild;
+			console.log(last.previousSibling)
+			console.log(last.parentNode)
+		</script>
+	</body>
+</html>

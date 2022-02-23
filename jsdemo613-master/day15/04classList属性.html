@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	     .info{
+			 width: 300px;
+			 height: 300px;
+			 background-color: #008000;
+		 }
+		 .hid{
+			 display: none;
+		 }
+	</style>
+	<body>
+		 <input type="button" value="切换" onclick="view()" />
+		<div class="info hid">
+			
+		</div>
+		
+		<script>
+		    function view(){
+				var obj=document.querySelector("div");
+				var css=obj.classList;
+				//转换为数组
+				css=Array.from(css);
+				
+				console.log(css,css.indexOf("hid"))
+				
+				//判断数组中是否有  hid
+				if(css.indexOf('hid')==-1){
+					//说明当前的div是显示状态 
+					//改成不显示 
+					css.push("hid");
+				}else{
+					css.pop();
+					console.log("移除后:",css)
+				}
+				
+				obj.className=css.join(" ");
+				console.log(obj.className)
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="14属性注册阻止默认行为window.beforeunload.html" >
+			页面离开
+		</a>
+		<script>
+		   var obj=document.querySelector("a");
+		   obj.attachEvent("onclick",function(event){
+			   console.log("-------a-----",event.returnValue==undefined)
+			   //阻止默认行为
+			   event.returnValue=false;
+		   })
+		</script>
+	</body>
+</html>

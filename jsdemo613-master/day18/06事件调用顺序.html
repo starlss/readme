@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="事件调用顺序" onclick="test()" />
+	    <script>
+		
+		
+		     function test(){
+				 console.log("html属性事件调用 ")
+			 }
+			 
+			  var btn=document.getElementById("btn");
+			 
+			 btn.attachEvent("onclick",function(){
+			 				 console.log("eventlister事件调用 ")
+			 })
+			 
+			 btn.attachEvent("onclick",function(){
+			 				 console.log("----3 ")
+			 })
+			 
+			 btn.attachEvent("onclick",function(){
+			 				 console.log("----2 ")
+			 })
+			 
+			
+			 
+			
+			 btn.onclick=function(){
+			 	console.log("对象属性事件调用 ")
+			 }
+			 
+			
+			
+		</script>
+	</body>
+</html>

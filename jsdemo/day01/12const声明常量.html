@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   const tel="abc";//全局变量 
+		   console.log(window.tel)
+		  { 
+			   const tel=12;
+			  console.log("te>>>",tel)
+		  }
+		  
+		  const o={x:12};//对象的定义方式  对象是一组无序的属性集合 
+		  console.log("改之前:"+o.x)
+		  o.x=15;
+		  console.log("改之后:"+o.x)
+		 // o={y:233};
+		 const score=[23,45];
+		 console.log(score)
+		 score[0]=666;
+		  console.log(score)
+		 // score=[];
+		</script>
+	</body>
+</html>

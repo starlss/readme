@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>{
+		   let x=1;  //声明变量  
+		   console.log("x=",x)
+		   console.log("x=>",window.x)
+		 {
+			   let y=2;
+			   console.log("y=",y)
+			   console.log("x>>>",x)
+		 }
+		// console.log("y------",y)
+		function test(){
+			
+			{
+				//console.log("tel>>>",tel)
+				let x=23;
+				//......
+				let tel="12212"; 
+			}
+			console.log("x>>>>"+x)
+		}
+		test();}
+		</script>
+		
+		<script>
+		   //console.log("其它脚本：",x)//不允许访问  
+		   
+		   console.log("age>",age)
+		   var age=23;
+		</script>
+	</body>
+</html>

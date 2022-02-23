@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            //无参
+            var  a1=new Array();//等价于  []
+            console.log(a1==[])//false  []直接量调用相当于重新创建一个新的数组
+           //指定长度 
+           var a2=new Array(10);
+           console.log(a2)
+           console.log(a2[0])
+           console.log("index=20>>",a2[20])
+           //对比 
+           var a3=[2,4,5];
+           console.log(a3)
+           
+           //  使用直接量做为元素  创建数组 
+           //元素是非数字类型的 至少提供一个参数 
+           var a4=new Array({});
+           console.log(a4)
+           //如果元素是数字类型的 至少提供两个参数 
+           var a5=new Array(2,3);
+           console.log(a5)
+        </script>
+    </body>
+</html>

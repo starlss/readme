@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var tmp=new String("abc"); //new Date();
+			// 判断变量tmp  如果是字符串返回长度  如果是日期 返回哪一年
+			//console.log(typeof tmp)
+			//var rs=typeof tmp == "string" ? tmp.length : tmp.getFullYear();
+			var rs=tmp instanceof String? tmp.length : tmp instanceof Date ? tmp.getFullYear(): "无法识别";
+			
+			console.log(rs)
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form name="loginForm">
+            用户名:<input type="text" name="username" /><br>
+            密码:<input type="password" name="password" /><br/>
+            验证码:<input type="text" name="yzm" /><br/>
+            <input type="button" value="登录" onclick="login()"/>
+        </form>
+        <script>
+         // console.log(document.body)
+            function login(){
+               /* with(document.loginForm){
+                    var name=username.value;
+                    console.log("用户名:",name)
+                    var pwd=password.value;
+                    var tmpyzm=yzm.value;
+                    
+                    console.log(pwd,tmpyzm)
+                }*/
+                var obj=document.loginForm;
+                debugger;
+                var name=obj.username.value;
+                console.log("用户名:",name)
+                var pwd=obj.password.value;
+                var tmpyzm=obj.yzm.value;
+                
+                console.log(pwd,tmpyzm)
+              
+            }
+        </script>
+    </body>
+</html>

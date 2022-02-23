@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   #info{
+			   background-color: #008000;
+		   }
+		</style>
+	</head>
+	<body>
+       <div id="info">hello</div>
+	   <span class="ipt">今天天气不太好</span>
+	   <span class="ipt">我的心情也不好</span>
+	   <script>
+	        //根据id选择器获取dom
+			var obj=document.querySelector("#info");
+			console.log(obj.id)
+			var o2=document.querySelector(".ipt");
+			//console.log(o2)
+			var o3=document.querySelector("span");
+			console.log(o3)
+	   </script>
+	</body>
+</html>

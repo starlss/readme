@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   img{
+			   width: 20px;
+			   height: 20px;
+			   vertical-align: bottom;
+			   margin-right: 5px;
+			   cursor: pointer;
+		   }
+		</style>
+	</head>
+	<body>
+		<img src="images/uncheck.png" onclick="chg()"/>男
+		<script>
+		    function chg(){
+				//获取图片
+				var obj=document.querySelector("img");
+				//获取图片src属性的值 
+				var tmp=obj.src;
+				//查找images的位置 
+				var pos=tmp.indexOf("images/");
+				//截取后面的字符串
+				var pic=tmp.substring(pos);
+				//说明当前是未选 中的状态
+				if(pic=="images/uncheck.png"){
+					//更换成选中状态  
+					obj.src="images/check.png";
+				}else{
+					//更改成未选中状态
+					obj.setAttribute("src","images/uncheck.png");
+				}
+				
+			}
+		</script>
+	</body>
+</html>

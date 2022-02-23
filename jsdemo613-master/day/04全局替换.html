@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //最少一个数字 
+		   var reg=/\d+/g;
+		   reg=new RegExp("\d+","g");
+		   var s="abcsd12lkadf5555";
+		   //把字符串的数字替换成*
+		   console.log(s.replace(reg,"*"))
+		   console.log(s.replaceAll(reg,"*"))
+		   
+		</script>
+	</body>
+</html>

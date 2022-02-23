@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var a=[8,9,98,21,67,5,19];
+		   /**
+			* @param {Object} arr 要排序的数组 
+			* @param {Object} start  哨兵i的位置 
+			* @param {Object} end 哨兵j的位置  
+			*/
+		   function quickSort(arr,start,end){
+			  // debugger;
+			   if(start>=end)
+			     return;
+			   
+			  // debugger;
+			   //定义一个基数 将数组的第一位数做基数 
+			   var basic=arr[start];
+			   //定义哨兵
+			   var i=start;
+			   var j=end;
+			   
+			   //如果i没有碰到j时  一直查找  
+			   while(i<j){
+				   //从数组末尾开始查找第一个小于基准数的数 
+				   if(arr[j]>basic){
+					   j--;
+				   }else{
+					   //i开始向右查找第一个比基准数大的数 
+					   if(arr[i]>basic){
+						   //停止  交换i和j位置的值  
+						   var tmp=arr[i];
+						   arr[i]=arr[j];
+						   arr[j]=tmp;
+						   
+					   }else{
+						   i++;
+					   }
+				   }
+			   }
+			   
+			   //程序走到这里 i和j碰面了 
+			   //交换i和基准数的值 
+			   var tmp=arr[i];
+			   arr[i]=arr[start];
+			   arr[start]=tmp;
+			   
+			   //   小于小间数    中间数  大于中间数 
+			   
+			   //现在i的位置是基准数  分别排序 i左边的数组 和i右边的数组 
+			    //排序左边的
+			   quickSort(arr,start,i-1);
+			   
+			   //排序右边的
+			   quickSort(arr,i+1,end);
+			   
+		   }
+		   
+		   
+		   quickSort(a,0,a.length-1);
+		   console.log(a);
+		</script>
+	</body>
+</html>

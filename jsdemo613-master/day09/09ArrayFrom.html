@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		  //偽數組對象
+		  var obj={};
+		  obj[0]=23;
+		  obj[1]=345;
+		  obj[2]=13;
+		  console.log(obj)
+		 // var it=obj.entries();
+		  var a1=Array.from("hello");
+		  console.log(a1)
+		  
+		  var a2=[23,34,12];
+		  var it=a2.entries();
+		  var a3=Array.from(a2)
+		  console.log(a3)
+		  
+		</script>
+	</body>
+</html>

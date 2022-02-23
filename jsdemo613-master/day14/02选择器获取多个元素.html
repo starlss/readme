@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   #info{
+			   background-color: #008000;
+		   }
+		</style>
+	</head>
+	<body>
+       <div id="info">hello</div>
+	   <span class="ipt">今天天气不太好</span>
+	   <span class="ipt">我的心情也不好</span>
+	   <script>
+	        //根据id选择器获取dom
+			var o=document.querySelectorAll(".ipt");
+			
+			//类数组对象    数级里有foreach遍历
+			o=Array.from(o);
+			o.forEach(function(el){
+				console.log(el)
+			})
+	   </script>
+	</body>
+</html>

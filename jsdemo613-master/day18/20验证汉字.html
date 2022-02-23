@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //验证汉字
+		   var reg=/^[\u4e00-\u9fa5]+$/;
+		   console.log(reg.test("abc"))
+		   console.log(reg.test("中国"))
+		   console.log(reg.test("人2楞"))
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+           test1();
+          var name="张三"; 
+
+           name="abc";
+
+          //代码块
+         {
+             var name="lily";
+         }
+
+
+         function test1(){
+            // var name="李四";  //局部变量 
+            name="李四";  
+         }
+
+       
+
+         console.log("name>>",name)
+
+      //用let对比 
+        
+          let age=23;
+
+          {
+              let age=12;
+          }
+
+           age=33;  //重新赋值
+
+          function test2(){
+              let age=88;
+          }
+
+          test2();
+
+          console.log("age>>",age)
+
+
+     </script>
+
+    
+</body>
+</html>

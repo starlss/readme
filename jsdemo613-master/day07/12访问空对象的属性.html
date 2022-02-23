@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+          <script>
+              var obj=null;
+              
+              
+              try{
+              console.log(obj.x)
+              }catch(e){
+                  
+              }
+              
+              
+              
+              
+              //在空对象上访问属性 
+            //  console.log(obj.x)
+              
+              //如何解决空对象带来的错误 
+              
+              //解决方案一  使用if判断 
+              //obj如果存在 返回true 不存在（包含空）返回false
+              if(obj){ //如果obj这个对象存在 不为空 则执行
+                  console.log(obj.x)
+              }
+              
+              obj={
+                  x:23
+              };
+              //解雇 方案二  
+              //  &&  当左边的表达式为false时，则右边的 表达式不执行
+              console.log(obj&&obj.x)
+              
+              
+          </script>
+    </body>
+</html>

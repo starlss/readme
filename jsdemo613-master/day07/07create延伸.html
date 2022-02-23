@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // 利用默认的对象原型创建   空对象 
+            let obj=Object.create(Object.prototype);
+            console.log(obj)
+            //以{} 为原型创建对象   obj2继承{}对象  {}对象默认继承了Object.prototype  
+            let obj2=Object.create({});
+            console.log(obj2)
+            
+            //利用已有的对象为原型  创建新的对象 
+            //对象o1的原型是  
+            let o1={
+                name:"lily",
+                age:12
+            };
+            console.log("o1的原型:",o1)
+            
+            //以o1为原型 创建新的对象 o2   相当于o2继承o1
+            //  o2继承o1  o1继承Object.prototype  o2则间接继承Object.prototype
+            let o2=Object.create(o1);
+            o2.info="asd";
+            
+            console.log("o2的原型：",o2)
+            console.log(o2.name)
+            console.log(o2.age)
+            console.log(o2.toString())
+            
+            //以null为原型创建对象  这是一个空对象  不继承任何东西
+            let o3=Object.create(null);
+            o3.name="sdf";
+            console.log("o3",o3)
+          //  console.log(o3+" --")
+          var tmp=Object.prototype;
+          console.log(tmp)
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+       
+          try{
+              var x=23;
+              console.log(x)
+             // throw new Error("异常");
+              x++;
+              console.log(x)
+          }catch(e){
+              //出现异常执行这里 e代表的是异常信息
+             // console.log(e)
+             //当出现异常情况  该处理的逻辑 
+             console.log(e)
+              
+          }finally{
+              console.log("----over-------")
+          }
+          
+          console.log("-------end------")
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+          var queue=[];
+          //用push方法加入数据 
+          queue.push(1);
+          queue.push(2);
+          queue.push(3);
+          console.log(queue)
+          //数组左边为队列的头部 右边就是尾部
+          for(var i=0;i<queue.length;i++){
+             var tmp=parseInt(i)+1;
+              console.log("第"+tmp+"个出列:"+queue.shift())
+          }
+          
+          while(queue.length>0){
+              console.log(queue.shift())
+          }
+          
+          
+          
+        </script>
+    </body>
+</html>

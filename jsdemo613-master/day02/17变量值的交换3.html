@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       //交换两个变量的值 
+       function test(obj1,obj2){
+        console.log("内部改变前obj1="+obj1.age+"  obj2=="+obj2.age);
+           var tmp=obj1.age; //声明一个临时变量  存储x
+          obj1.age=obj2.age; //存储y的值
+          obj2.age=tmp;
+          console.log("内部改变后obj1="+obj1.age+"  obj2=="+obj2.age);
+       }
+
+       var o1={age:23};
+       var o2={age:48};
+       test(o1,o2);
+       console.log("外部o1="+o1.age+"  o2=="+o2.age);
+
+
+    </script>
+</body>
+</html>

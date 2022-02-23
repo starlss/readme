@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+         /* var  obj={};
+          console.log("proto:",Object.prototype)
+          console.log(obj)
+          var tmp=new Object();
+          console.log("tmp",tmp)*/
+          var Obj =function(){}   //Object.create(Object.prototype);
+          //obj  ==   {}    new Object()
+          //覆盖obj对象的toString方法 
+          
+          // Object  String Date  称为类
+         
+          Obj.prototype.toString=function(){
+              return "hello";
+          }
+          
+          var t=new Obj();
+          console.log(t)
+          console.log(t.toString())
+         
+        </script>
+    </body>
+</html>

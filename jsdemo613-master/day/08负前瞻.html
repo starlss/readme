@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //匹配win   限制win前面不是xp 7 8  
+		   var reg=/win(?!xp|7|8)/;
+		   console.log(reg.test("win0"))
+		    console.log(reg.test("win7"))
+		</script>
+	</body>
+</html>

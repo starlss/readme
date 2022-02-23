@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		     var  x=100;
+		     function f(){
+				 //局部变量 
+				 var x=12;
+				 console.log(x)
+				 
+				 function f2(){
+					 console.log("f2--x=",x)
+				 }
+				 //在内部调用  
+				 //f2();
+				return f2;
+			 }//x到这结束 了 
+			 
+			var tmp= f();//返回了一个函数对象指向f.f2
+			 //在f外边调用  
+			 tmp();  //在输出x时 先从第一个对象上找 
+		</script>
+	</body>
+</html>

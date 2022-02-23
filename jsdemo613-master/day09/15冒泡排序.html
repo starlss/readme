@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var a=[44,23,78,56,12,90,3];
+		   //获取数组长度
+		   var len=a.length;
+		   //  根据数组的长度len 进行len-1轮 计算 
+		   for(var i=1;i<len;i++){
+			   
+			   //遍历数组中的元素 两两比较  
+			   for(var j=0;j<len-i;j++){
+				   //如果当前位置的元素比 后面的元素大 交换位置
+				   if(a[j]>a[j+1]){
+					   //定义一个临时变量 存储第一个位置的值 
+					   var tmp=a[j];
+					   a[j]=a[j+1];//将后面位置的值赋值给前面的位置  
+					   a[j+1]=tmp;
+				   }
+			   }
+			   
+		   }
+		   
+		   console.log(a)
+		   
+		   
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var reg=/1[3578]\d{9}/;
+		   var s="asdflasdkfa1359874563200lasdfllasdf158789456123asdfl";
+		   //提取第一手机号
+		   var rs=s.match(reg);
+		   console.log(rs[0])
+		   
+		   //提取所有手机号
+		   reg=/1[3578]\d{9}/g;
+		   rs=s.match(reg);
+		   console.log(rs)
+		   for(var o in rs){
+			   console.log(rs[o])
+		   }
+		   
+		   //matchAll
+		   rs=s.matchAll(reg);
+		   console.log("rs>>",rs)
+		   
+		</script>
+	</body>
+</html>

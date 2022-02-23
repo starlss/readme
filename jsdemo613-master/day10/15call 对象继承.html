@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		 
+		 // 个人用户  用户名  密码  mobile  性别  
+		 // 企业用户  用户名  密码  法人  办公电话 
+		 
+		 //正常情况 
+		 function person(username,password,mobile,gender){}
+		 function enterprise(username,password,boss,tel){}
+		 
+		 //新的需求  要求密码必须 是   大写字母、小写字母 数字 
+		 //更改构造函数person \ enterpirese  
+		 
+		 function  user(username,password){}
+		 
+		 function person(username,password,mobile,gender){
+			 user.call(this,username,password);
+			 this.mobile=mobile;
+			 this.gender=gender;
+		 }
+		 
+		 
+		  function enterprise(username,password,boss,tel){
+			   user.call(this,username,password);
+			   this.boss=boss;
+			   this.tel=tel;
+		  }
+		 
+		 
+		 
+		</script>
+	</body>
+</html>

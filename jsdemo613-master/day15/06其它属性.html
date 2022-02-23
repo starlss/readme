@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="info" style="background-color: #008000;">
+			abc
+			
+		</div>
+		<script>
+		   var obj=document.querySelector("div");
+		   console.log("width:",obj.clientWidth);
+		   console.log("height:",obj.clientHeight)
+		   console.log(obj.id)
+		   console.log(obj.tagName)
+		   console.log(obj.childElementCount)
+		   console.log(obj.getAttribute("id"))
+		   console.log(obj.hasAttribute("class"))
+		   console.log(obj.hasAttributes())
+		   
+		   var atts=obj.getAttributeNames();
+		   atts=Array.from(atts);
+		   atts.forEach(function(attName){
+			   console.log(attName+"="+obj.getAttribute(attName))
+		   })
+		   
+		   var attNode=obj.getAttributeNode("style");
+		   console.log(">>",attNode)
+		   
+		   obj.remove()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	     .info{
+			 width: 300px;
+			 height: 300px;
+			 background-color: #008000;
+		 }
+		 .hid{
+			 display: none;
+		 }
+	</style>
+	<body>
+		 <input type="button" value="切换" onclick="view()" />
+		<div class="info hid">
+			
+		</div>
+		
+		<script>
+		    function view(){
+				var obj=document.querySelector("div");
+				var css=obj.classList;
+				/*console.log(css)
+                var en=css.entries();
+				var tmp=en.next();
+				console.log(tmp)
+				console.log("css类的key="+tmp.value[0],"value="+tmp.value[1])
+			    var tmp=en.next();
+				console.log("css类的key="+tmp.value[0],"value="+tmp.value[1])
+				
+				console.log("keys>>",css.keys().next())
+				console.log("values>>",css.values().next())*/
+				
+			/*	css.forEach(function(d){
+					console.log(d)
+				})
+				
+				console.log(css.item(0))
+				
+				css.replace("hid","abc")*/
+				
+				
+				
+			}
+		</script>
+	</body>
+</html>

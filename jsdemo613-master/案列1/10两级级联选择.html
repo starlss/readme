@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			select {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		所在组:<select id="group" onchange="chg(this)">
+		</select>
+		<br />
+		姓名:<select id="student">
+		</select>
+
+		<script>
+			//数据
+			var data = [{
+					groupname: "一组",
+					student: ["翁梦良", "叶茂", "霍炳旭"]
+				},
+				{
+					groupname: "二组",
+					student: ["李硕", "马经涛"]
+				},
+				{
+					groupname: "三组",
+					student: ["焦喜豪", "李树涣", "马程举", "宋伟华"]
+				},
+			];
+
+			function chg(el) {
+				//遍历data数组 获取里面的学生
+				for(var o in data){
+					//临时对象
+					var tmp=data[o];
+					//判断当前对象的组名是否跟el.value相等 
+					if(el.value==tmp.groupname){
+						eachStudent(tmp.student);
+						break;//中止循环 
+					}
+				}
+			}
+
+			function init() {
+
+
+				//初始化所在组的下拉列表
+				var group = document.querySelector("#group");
+				for (var o in data) {
+					//获取临时对象
+					var tmp = data[o];
+					//创建option元素
+					var opt = document.createElement("option");
+					//设置属性value
+					opt.setAttribute("value", tmp.groupname);
+					opt.innerText = tmp.groupname;
+					//追加到下拉列表中
+					group.appendChild(opt);
+					if (o == 0) {
+						//顯示學生
+						eachStudent(tmp.student);
+					}
+				}
+			}
+
+
+			//遍历对应组的名单
+			function eachStudent(arr) {
+				var student = document.querySelector("#student");
+				
+				//先清除所有子元素
+				student.innerHTML="";
+				//遍历数组
+				for (var o in arr) {
+					//获取临时对象
+					var tmp = arr[o];
+					//创建option元素
+					var opt = document.createElement("option");
+					//设置属性value
+					opt.setAttribute("value", tmp);
+					opt.innerText = tmp;
+					//追加到下拉列表中
+					student.appendChild(opt);
+				}
+			}
+
+
+			//调用方法 
+			init();
+		</script>
+	</body>
+</html>

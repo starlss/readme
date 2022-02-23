@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		    var x="abc";
+			x='hello';
+			x='你好，"张三"';
+			console.log(x)
+			
+			var flag=true;  
+			console.log(typeof flag)
+			
+			var o=null;
+			console.log(o)
+			
+			console.log(y)
+			var y;
+			
+			//数组  将数组的直接量 赋值给变量  
+			var score= [546,23,67,89];
+			
+			//对象的属性和值 用:  隔开， 属性与属性之间用逗号隔开
+			
+			var user={
+				name:"张三",
+				age:23,
+				info:function(){
+					//在方法内通过this引用该对象的其它属性  
+					console.log(this.name+"的年龄是"+this.age)
+				}
+			};
+			
+			
+			user.info()
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

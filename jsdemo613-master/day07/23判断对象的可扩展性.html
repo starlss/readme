@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var obj={
+               x:23
+           };
+           console.log(Object.isExtensible(obj))
+           obj.y=12;
+           console.log("扩展后:",obj)
+           
+           //将对象转换为不可扩展的 
+          // Object.preventExtensions(obj);
+           obj.z=12;
+           console.log(obj)
+           
+          
+        
+           //封闭对象 
+           // Object.seal(obj)
+            console.log("obj是不是封闭的：",Object.isSealed(obj))
+       
+            obj.a=23;
+            console.log(obj)
+            
+            //冻结对象 
+            Object.freeze(obj);
+            console.log(Object.isFrozen(obj))
+            obj.b=3432;
+            console.log(obj)
+            
+        </script>
+    </body>
+</html>

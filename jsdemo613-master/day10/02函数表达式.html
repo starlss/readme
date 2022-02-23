@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //字符串直接 量  通过双引号引起来的 
+		 //  "abc"
+		   //对象直接量   {}  将对象的直接量赋值给变量obj
+			var obj=	{name:"abc"};
+		
+		 //  f(12,2);
+		 console.log("f-===",f)
+		
+		  // 函数直接 量 
+		   var f= function(x,y){
+			   console.log("x==",x)
+		   }
+		   
+		   f(5,3);
+		   
+		   //
+		   (function(){
+			   console.log("-----函数自调用 ----")
+		   }())  ;
+		   
+		   //
+		   (function(){
+			   console.log("----在外部调用-----")
+		   })();
+		   
+		   
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   function sum(x,y){
+			   console.log(x+y)
+		   }
+		   
+		   sum.call(this,3,7)
+		   
+		   var obj={
+			   name:"張三",
+			   age:123,
+			   info:function(){
+				   console.log(this.name+"的年齡是"+this.age)
+			   }
+		   };
+		   
+		   obj.info.call(obj)
+		</script>
+	</body>
+</html>

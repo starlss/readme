@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="测试" id="btn" />
+		www
+		<script>
+		//window.document  代表当前整个文档  
+		    let obj=document.getElementById("btn");
+			console.log(obj.value,obj.type)
+			//obj.value="haha";
+			
+			let f=	function(event){
+					console.log("----按钮点击",this)
+				};
+				
+			obj.addEventListener("click",f)
+			
+	
+	
+		
+		</script>
+	</body>
+</html>

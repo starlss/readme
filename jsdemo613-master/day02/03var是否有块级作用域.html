@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          function  test(){
+               var name="张三";  //局部变量
+               //代码块   就是用{}括起来的 
+               {
+                    var age=23;
+                    console.log("name",name)
+                    console.log("age",age)
+               }
+
+               //外部访问
+               console.log("外部name",name)
+               console.log("外部age",age)
+          }
+
+          test();
+    </script>
+</body>
+</html>

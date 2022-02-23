@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--onblur用户输入完  失焦时执行-->
+    用户名:<input type="text" onblur="chg(this)"/>
+    <script>
+        function chg(obj){
+             var name=obj.value;
+             console.log("删除前：",name.length) ;
+             console.log("删除后：",name.trim().length);
+             // name.trimStart().length  等价于  var tmp=name.trimStart();   tmp.length
+            // console.log("删除前面的空格",name.trimStart().length);
+            var tmp=name.trimStart();  //去掉开头的空格  并返回一个新的字符串  name本身没有任何变化 
+            console.log("删除前面的空格:",tmp.length);
+            console.log("trimLeft===>",name.trimLeft().length);
+
+            console.log("删除右边的空格",name.trimEnd().length);
+            console.log("删除右边的空格right",name.trimRight().length);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var a=[23,34,[56]];
+		  (function(att){
+			  //假如att就是数组
+			  if(att.flat){
+				  console.log(att.flat(2))
+			  }else{
+				  //自处理 
+				  flat(att);
+			  }
+			  
+			  function flat(a){
+				  console.log(att)
+			  }
+			  
+			  
+		  }(a));
+		</script>
+	</body>
+</html>

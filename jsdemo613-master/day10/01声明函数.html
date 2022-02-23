@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//sum(5, 6);
+
+			//函数声明语句   只是声明  并不会执行 
+			//  x   y  形式参数  
+			function sum(x, y) {
+				console.log(x)
+				//作為函數 this  代表全局對象  
+				console.log(this)
+			}
+
+			//调用  
+			sum(2, 4);
+		</script>
+	</body>
+</html>

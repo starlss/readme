@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		
+		   (function(){
+			   let x=123; //局部变量 在整个函数体内都可以使用 
+			   
+			   //在函数内声明 函数
+			   function t1(){
+			   	console.log("t1   x===>",x);
+			   }
+			   
+			   function t2(){
+			   	console.log("t2   x===>",x);
+			   }
+			   //
+			   t1();
+			   t2();
+		   })();
+		
+		</script>
+	</body>
+</html>

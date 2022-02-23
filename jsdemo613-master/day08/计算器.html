@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    .box {
+        width: 300px;
+        height: 450px;
+        margin: 50px auto;
+        padding: 20px 15px;
+        border: 1px solid #333;
+        background: #ddd;
+        border-radius: 10px;
+    }
+
+    .box .shuru {
+        width: 300px;
+        height: 40px;
+        font-size: 40px;
+        outline: none;
+        border: none;
+        text-align: right;
+        color: #333;
+        border-radius: 5px;
+
+    }
+
+
+
+    .box .comp {
+        margin-top: 50px;
+        width: 300px;
+        height: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .box .comp .act {
+        width: 70px;
+        height: 50px;
+        font-size: 24px;
+        font-weight: 500px;
+    }
+
+    .box .comp .act:nth-child(1) {
+        color: orange;
+    }
+
+    .box .comp .act:nth-child(4) {
+        color: red;
+    }
+
+    .box .comp .act:nth-child(20) {
+        color: green;
+    }
+</style>
+
+<body>
+
+<form>    <div class="box">
+        <input type="text" id="result" class="shuru" name="result" placeholder="0">
+
+        <div class="comp">
+            <input type="reset" class="act" value="C" >
+            <input type="button" class="act" value="/" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="*" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="del" onclick="calCulate(this.value)">
+
+            <input type="button" class="act" value="7" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="8" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="9" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="+" onclick="calCulate(this.value)">
+
+            <input type="button" class="act" value="4" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="5" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="6" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="-" onclick="calCulate(this.value)">
+
+            <input type="button" class="act" value="1" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="2" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="3" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="." onclick="calCulate(this.value)">
+
+            <input type="button" class="act" value="√" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="x²" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="0" onclick="calCulate(this.value)">
+            <input type="button" class="act" value="=" onclick="calCulate(this.value)">
+        </div>
+    </div>
+</form>
+
+    <script>
+        //定義數組  
+        var cal=[];
+        function calCulate(val) {
+             //第一步 判斷val是否是數字  
+             if(isNaN(val)){//返回true  說明是操作符
+             
+                  //如果數組為空 不將操作符加入數組
+                  if(cal.length==0)
+                     return;  //不再執行
+                     
+                  //判斷val是否是=  
+                     if(val=="="){
+                         var rs=eval(cal.join(""));
+                         document.getElementById("result").value=rs;
+                         return;
+                     }
+                    
+                  //說明數組不為空 
+                 //取出數組最后一位值 
+                 var tmp=cal.pop();
+                 if(tmp==val){
+                     //將tmp重新放回去 
+                     cal.push(tmp);
+                     return;
+                 }else{
+                     //判斷tmp是否是操作符
+                     if(isNaN(tmp)){//是操作符 
+                         //將tmp重新放回去
+                         cal.push(tmp);
+                         return;
+                     }else{
+                           cal.push(tmp);
+                           //把新的值 加入進去
+                           cal.push(val);
+                     }
+                 }
+             }else{//說明是數字 
+                 //直接放入數組
+                 cal.push(val);
+             }
+             console.log(cal)
+             //將數組中的值拼成字符串放入結果中顯示  
+             document.getElementById("result").value=cal.join("");
+        }
+    </script>
+
+</body>
+
+</html>

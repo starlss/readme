@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+        //一维数组 
+             var a1=[1,2,3];
+             var a2=[4,5,6];
+             var a3=[7,8,9];
+            //多维数组 将元素的值设置成数组  数组的数组
+            // a4 是一个数组  a4中的元素也是数组 
+             var a4=[a1,a2,a3];
+             console.log(a4)
+             
+             //1 的位置   第一行 第一列 
+             //a4是一个数组 a4[0]--->a1  a4[0][0]==>a1[0]
+             console.log(a4[0][0])
+             console.log(a4[2][1]);
+             
+             //遍历二维数组 
+             for(var i in a4){
+                 //定义一个临时变量 存储a4的元素
+                // var tmp=a4[i]; 
+                 //遍历二层数组 
+                 for(var j in a4[i]){
+                     console.log("a4["+i+"]["+j+"]="+a4[i][j])
+                 }
+             }
+             
+        </script>
+    </body>
+</html>

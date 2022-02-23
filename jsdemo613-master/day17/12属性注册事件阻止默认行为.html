@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="11attachEvent事件对象.html" onsubmit="return test()">
+			用户名：<input type="text" id="username" />
+			<br/>
+			<input type="submit" value="测试" />
+		</form>
+		<script>
+		    function test(){
+				console.log("-------test");
+				var username=document.getElementById("username").value;
+				if(username==""){
+					alert("用户不名能为空！");
+					//阻止提交表单 
+					return false;
+				}
+				//执行正常行为
+				return true;
+			}
+		</script>
+	</body>
+</html>

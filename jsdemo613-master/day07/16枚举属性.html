@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var obj={
+               y:154,
+               x:12
+           };
+           console.log(obj)
+           
+           //自定义属性 默认是可枚举的  
+           console.log(obj.propertyIsEnumerable("x"))
+       
+           console.log(obj.propertyIsEnumerable("toString"))
+        
+           console.log("枚举属性：")
+           //for in 遍历  对象的枚举属性 
+           for(var o in obj){
+               console.log(o)
+           }
+           
+           //Object.keys 
+           var arr=Object.keys(obj);
+           console.log("arr>>",arr)
+           
+           //定义一个新的对象 
+           var o3=Object.create(obj);
+           console.log(o3)
+           o3.z=13;
+           
+           //定义一个不可枚举属性
+           Object.defineProperty(o3,"a",{value:45,enumerable:false})
+           
+           for(var o in o3){
+               console.log(o)
+           }
+           
+           console.log("o3:",Object.keys(o3))
+           console.log(">>",Object.getOwnPropertyNames(o3))
+           
+           console.log(o3.a)
+           
+        </script>
+    </body>
+</html>

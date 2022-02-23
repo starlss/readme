@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+            var tags="新品   物美 价廉";
+            console.log("原字符串：",tags);
+            var tmp=tags.split(/\s+/);
+            console.log("分隔后",tmp);
+
+           /*  let len=tmp.length;
+        
+            for(let i=0;i<len;i++){
+                console.log(tmp[i]);
+            } */
+
+            for(let x in tmp){
+                console.log(tmp[x]+"\n");
+            }
+      </script>
+</body>
+</html>

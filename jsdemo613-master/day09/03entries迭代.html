@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var a=[23,45,19,324,81];
+		   
+		  //获取数组a的迭代对象
+		   var it=a.entries();
+		   while(true){
+		  			 //  debugger;
+		  			   var tmp=it.next();
+		  			   var obj=tmp.value;
+		  			 if(obj==undefined)
+		  			    break;
+		  			   console.log(obj[0]+"----->"+obj[1]);
+		  			   //根据tmp中的done来结束循环
+		  			   /*if(tmp.done){
+		  				   flag=false;
+		  			   }*/
+		   }
+		   
+		</script>
+	</body>
+</html>

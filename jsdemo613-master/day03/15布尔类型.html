@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var flag=true;  //代表真 
+         flag=false;//  代表假
+         console.log(flag);
+         console.log(typeof flag);
+         flag=flag.toString();
+         console.log(typeof flag);
+         console.log(flag);
+
+         console.log("无参",new Boolean());
+         console.log("空字符串",new Boolean(""));
+         console.log("数字-10",new Boolean(-10));
+         console.log("数字10",new Boolean(10));
+         console.log("数字1",new Boolean(1));
+         console.log("数字0",new Boolean(0));
+         console.log("hello",new Boolean("hello"));
+         console.log("true",new Boolean(true));
+         console.log("false",new Boolean(false));
+         console.log("字符串true",new Boolean("true"));
+         console.log("字符串false",new Boolean("false"));
+         console.log("undefined",new Boolean(undefined));
+         console.log("null",new Boolean(null));
+         console.log("对象",new Boolean({}));
+    </script>
+</body>
+</html>

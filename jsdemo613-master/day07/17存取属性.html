@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var obj={
+                x:23,  // x 数据属性 
+                get name(){
+                    return this.x=23*2;//读取_name的值
+                },
+                set name(nv){console.log("nv",nv)
+                    this.x=nv;
+                }
+            };
+            
+            console.log(obj)
+            obj.name="85";
+            
+            console.log(obj.name)
+            
+        </script>
+    </body>
+</html>

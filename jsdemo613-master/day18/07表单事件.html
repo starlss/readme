@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<!--
+			   onchange="chg(this)"  当文本发生改变的时候 
+			-->
+			
+			用户名：<input type="text" oninput="chg(this)" />
+			<br>
+			头像:<input type="file" onchange="getfile(this)" />
+		</form>
+		<script>
+		    function chg(obj){
+				console.log(obj.value)
+			}
+			
+			function getfile(obj){
+				if(obj.value.lastIndexOf(".png")<0){
+					alert("请重新选择图片！");
+					obj.value="";
+				}
+			}
+		</script>
+	</body>
+</html>

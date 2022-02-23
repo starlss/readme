@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var obj={};
+		   obj.x=12;
+		   obj.y=45;
+		   console.log(">>>",obj.x)
+		   
+		   var g=12;//全局变量 
+		   
+		   function t1(){
+			   var x=12;
+			   console.log("t1  g>>>",g)
+		   }
+		   
+		   function t2(){
+			   console.log("t2  g>>>",g)
+			  // console.log("t2 x>>>",x)
+		   }
+		   
+		   t1();
+		   t2();
+		</script>
+	</body>
+</html>

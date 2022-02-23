@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {}
+
+			span {
+			 display: inline-block;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				padding-top: 10px;
+				font-size: 14px;
+				font-weight: bold;
+			 cursor: pointer;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+
+			.sel {
+				border-style: none;
+				border-top: #000 solid 2px;
+				background-color: #FFFFFF;
+				color: #000000;
+
+			}
+
+			.unsel {
+				background-color: #ccc;
+				color: #999;
+				border-left: #F1F1F1 solid 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<div onclick="tab(event)">
+			<span class="sel" >待支付</span>
+			<span class="unsel" >待发货</span>
+			<span class="unsel" >待评论</span>
+		</div>
+		<script>
+          function tab(e){
+			//获取所有选项卡 遍历
+			var arr=document.querySelectorAll("span");
+		    arr.forEach(function(el){
+				//如果当前事件目标等于遍历到的对象 
+				 if(e.target==el){
+					 el.className="sel";
+				 }else{
+					 el.className="unsel";
+				 }
+			})
+		 
+		  }
+		</script>
+	</body>
+</html>

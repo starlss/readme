@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+            console.log("请选择服务：1~9");
+            var choose=prompt("请选择:");//choose 是字符串
+           // choose=choose-0;
+             choose=parseInt(choose);
+            console.log(typeof choose)
+            switch(choose){
+                case 1:
+                //如果值为1  该做什么工作 
+                console.log("正在查询话费。。。");
+                
+                break;//代表中上switch语句  跳出switch语句 
+                
+                case 2: 
+                   console.log("正在查询流量...");
+                   break;
+                   
+                default: //如果以上条件都不满足 执行这里 
+                   console.log("您的服务选择不正确")
+            }
+        </script>
+	</body>
+</html>

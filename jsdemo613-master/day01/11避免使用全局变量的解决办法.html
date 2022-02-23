@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //在js中声明对象的方法     对象是属性和行为的集合体  
+        //第一种  使用new创建对象 
+        var obj=new Object();
+        //在对象上增加name属性
+        obj.name="张三";
+        //输出name  通过对象名引用属性
+        console.log("名称：",obj.name)
+   
+
+        //直接输出name
+        console.log("name==>",name)
+        //输出window里的属性
+        console.log("window.name===>",window.name)
+        //输出window上的obj
+        console.log("window.obj==",window.obj)
+
+        //第二种创建方式 
+        var tmp={};   //声明一个对象 
+        tmp.age=23;
+        console.log("tmp.age>>>",tmp.age)
+
+
+        //第三种方式   声明的时候直接定义好 
+        var tmp2={
+            name:"lily",  //声明属性   key-value对，  多个之间用逗号隔开 
+            age:23
+        };
+
+        console.log("tmp2>>",tmp2.name,tmp2.age)
+    </script>
+</body>
+</html>

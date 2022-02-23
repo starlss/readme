@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   (function(){
+			   
+			   var info=navigator.userAgent;
+			   console.log(info)
+			   //获取剪切板对象
+			   var cp=navigator.clipboard;
+			   //获取剪切板内容 
+			 /*  if(info.indexOf("Chrome")>0){
+				   cp.readText().then(function(data){
+					   console.log("剪切板内容:",data)
+				   })
+			   }else if(info.indexOf("Firefox")>0){
+				   console.log("不支持读取剪切板")
+			   }*/
+			   
+			   if(cp.readText){
+				   cp.readText().then(function(data){
+				   					   console.log("剪切板内容:",data)
+				   })
+			   }else if(info.indexOf("Firefox")>0){
+				   console.log("当前浏览器不支持读取剪切板")
+			   }
+			   
+		   })();
+		</script>
+	</body>
+</html>

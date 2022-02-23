@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		     var name="张三"; //全局作用域   把该属性添加到了window对象上 
+			 console.log("name=",window.name)
+			 
+			 var age=13;
+			 console.log("age>>>",window.age)
+			
+		//	console.log(window.name)//window对象本身就有name属性 
+		
+		
+		  function test(){
+			  console.log("函数内部访问：",name)
+			   x=1;  //局部变量   只能在它所在代码块中访问   
+			  console.log("x=="+x)
+			  
+			  //代码块  
+			  {
+				  console.log("代码块x==",x)
+				  var y=2;
+				  console.log("y==",y)
+			  }
+			  console.log("代码块外y=",y)
+		  }
+		  
+		  
+		  //调用函数 
+		  test();
+		  
+		  console.log("外部访问x:",x)
+		</script>
+		
+		
+		<script>
+		
+		   console.log("下面的："+age)
+		</script>
+	</body>
+	
+	
+</html>

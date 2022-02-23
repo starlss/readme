@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+          var obj={
+              x:20
+          };
+          
+          //获取属性x的描述符 
+          console.log(Object.getOwnPropertyDescriptor(obj,"x"))
+          //更改前
+          console.log("更改前",obj.x)
+          obj.x=30;
+          console.log("更改后",obj.x)
+          
+          //设置属性描述符 使x不可写  x变成只读属性 
+          Object.defineProperty(obj,"x",{writable:false})
+          obj.x=40;
+          console.log("将x改为不可写后赋值：",obj.x)
+          
+          //查看obj的可枚举属性 
+          console.log("obj可枚举属性:",Object.keys(obj))
+          
+          //将obj.x这属性  设置为不可枚举的 
+          Object.defineProperty(obj,"x",{enumerable:false})
+          //列表可枚举属性
+          console.log("obj可枚举属性:",Object.keys(obj))
+          //将不可枚举属性列出来
+          console.log("obj属性：",Object.getOwnPropertyNames(obj))
+          
+          //将obj.x设置为不可配置的
+          Object.defineProperty(obj,"x",{configurable:false})
+          
+          //将x改为可枚举 
+          Object.defineProperty(obj,"x",{enumerable:true})
+          
+        </script>
+    </body>
+</html>

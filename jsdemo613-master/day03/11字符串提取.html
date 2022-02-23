@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var str="abc34a习大大bcs";
+          console.log("原字符串",str);
+          console.log(str.slice(3,5));
+
+          console.log(str.replace("abc",""));
+          console.log(str.replaceAll("习大大",""));
+          //   \d 代表数字   js中正则表达式要写在两个//中间   ^代表以开始 +代表出现的个数 最少出现一次 
+          console.log(str.replace(/\d/g,"*"));
+    </script>
+</body>
+</html>

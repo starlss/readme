@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   ul{
+			   list-style: none;
+		   }
+		   ul li{
+			   float: left;
+			   margin-left: 20px;
+			   background-color: #CCCCCC;
+			   cursor: pointer;
+		   }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li onclick="chg('#ff0000')">红色</li>
+			<li onclick="chg('#00ff00')">绿色</li>
+			<li onclick="chg('#0000ff')">蓝色</li>
+		</ul>
+		<script>
+		   function chg(color){
+			   document.body.bgColor=color;
+		   }
+		</script>
+	</body>
+</html>

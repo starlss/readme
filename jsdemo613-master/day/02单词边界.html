@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var reg=/er\b/;
+		   console.log(reg.test("er"))
+		    console.log(reg.test("aerb"))
+			console.log(reg.test("aer"))
+			//er 后面是空格 
+		    reg=/er\b/;
+			  console.log(reg.test("aer ss"))
+			  console.log(reg.test("ersss"))
+		</script>
+	</body>
+</html>

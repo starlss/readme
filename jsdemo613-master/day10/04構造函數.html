@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //构造函数 也可以看做  函数声明语句  
+		   function sum(x,y){
+			   //this代表sum函數本身 
+			   //sum做為構造函數使用  this指身sum類的對象
+			   console.log("sum內部：",this)
+			   //將x   y 賦值給當前對象 
+			   //給當前對象增加屬性 x  y   he
+			   this.x=x;
+			   this.y=y;
+			   
+			   this.he=function(){
+				   return this.x+this.y;
+			   }
+		   }
+		   
+		   //将sum函数当做构造函数使用 通过new创建sum函数的对象  
+		   var s=new sum(5,7);
+		   //求和 通過對象s調用對象方法
+		    console.log("和==",s.he())
+		   console.log("s==",s)
+		</script>
+	</body>
+</html>

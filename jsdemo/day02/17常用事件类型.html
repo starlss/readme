@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		  .d1{
+			  width: 200px;
+			  height: 200px;
+			  background-color: #f00;
+		  }
+		</style>
+	</head>
+	<body>
+		<script>
+		      function chg(e){
+				  e.target.style.backgroundColor="#0f0";
+			  }
+			  
+			  function msout(e){
+				  e.target.style.backgroundColor="#f00";
+			  }
+			  
+			  function save(){
+				  let obj=document.getElementById("username");
+				  let name=obj.value;
+				  if(name==""){
+					  console.log("请输入用户名");
+					  obj.focus();//聚焦 光标移到目录对象上
+				  }else{
+					  alert("您输入的用户名是:"+name);
+				  }
+			  }
+			  
+			  function fs(){
+				  console.log("----------")
+			  }
+			  
+			  function chgrole(event){
+				  console.log(event.target.value)
+			  }
+		</script>
+		<div class="d1" ondblclick="chg(event)" onmouseover="chg(event)" onmouseout="msout(event)" ></div>
+		
+		
+		
+		用户名:<input type="text" onblur="fs()" placeholder="请输入用户名" id="username" />
+		<br>
+		用户名色:<select onchange="chgrole(event)">
+			<option>管理员</option>
+			<option>销售经理</option>
+			<option>人事经理</option>
+		</select>
+		<br>
+		<input type="button" value="保存" onclick="save()" />
+	</body>
+</html>

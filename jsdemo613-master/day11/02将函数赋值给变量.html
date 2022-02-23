@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //将声明函数赋值给变量 
+		   function info(){
+			   console.log("=====info======")
+		   }
+		   //将函数赋值给变量 不会执行
+		   var f=info;
+		   //将函数的返回值赋值给f2 会执行 
+		   var f2=info();
+		   f();
+		   
+		   //将函数表达式赋值给变量 
+		   var f2=function(){}
+		</script>
+	</body>
+</html>

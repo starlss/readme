@@ -1,0 +1,100 @@
+body{
+	background-color: #E1E2E3;
+	margin: 0;
+	padding: 0;
+	font-size: 0.28rem;
+}
+.header{
+	width: 7.5rem;
+	height: 4.35rem;
+	background-color: #fd3c4e;
+	border:#fd3c4e solid 1px ;
+}
+.headerimg{
+	width: 1.3rem;
+	height: 1.3rem;
+	border-radius: 50%;
+	margin-left: 0.5rem;
+	float: left;
+}
+.header_first{
+	margin-top: 0.5rem;
+	width: 7.5rem;
+	height: 1.5rem;
+}
+.info{
+	float: left;
+	margin-left: 0.2rem;
+}
+.name{
+	color: #fff;
+	font-size: 0.32rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.tag span{
+	background-color: #E1251B;
+	border-radius: 0.3rem;
+	padding: 0rem 0.1rem;
+	font-size: 0.24rem;
+	color: #ddd;
+}
+.set{
+	width: 0.4rem;
+	height: 0.4rem;
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.2rem;
+}
+
+.header_second{
+	width: 7.5rem;
+	height: 1.2rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+.sec_item{
+	flex: 1;
+	text-align: center;
+	color: #fff;
+}
+
+.header_third{
+	width: 6.8rem;
+	height: 1rem;
+	background-color: #222159;
+	margin: auto;
+	border-top-left-radius: 0.2rem;
+	border-top-right-radius: 0.2rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	color: #fcd346;
+	justify-content: space-between;
+}
+
+.header_third img{
+	width: 0.3rem;
+	height: 0.3rem;
+	margin-left: 0.1rem;
+}
+.sy{
+	margin-right: 0.1rem;
+}
+.line{
+	display: inline-block;
+	width: 1px;
+	height: 0.2rem;
+	background-color:  #fcd346;
+	margin: 0 0.1rem;
+}
+
+.menus{
+	width: 7.5rem;
+	height: 2rem;
+	background-color: #fff;
+	border-radius: 0.2rem;
+	position: relative;
+	top: -0.2rem;
+}

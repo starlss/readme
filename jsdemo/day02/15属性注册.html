@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+		    function test(e){
+				console.log("----测试-----",e)
+				let obj=e.target;
+				console.log(obj.type,'===',obj.value)
+				console.log("this>>>",this)
+			}
+		</script>
+		<input type="button" value="测试" onclick="test(event)" />
+		
+		<input type="button" value="点一下" />
+	</body>
+</html>

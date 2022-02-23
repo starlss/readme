@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		用户名：<input type="text" id="username" onblur="sj(this)" />
+		<br>
+		<input type="button" value="登录" id="login"/>
+		<script>
+		   var login=document.getElementById("login");
+		   login.onclick=function(){
+			   var obj=document.getElementById("username");
+			   if(obj.value==""){
+				   console.log("用户名不能为空")
+				   //文本框聚焦
+				   obj.focus();
+			   }
+		   }
+		   
+		   function test(){
+			   console.log("聚焦事件")
+		   }
+		   function sj(obj){
+			   //根据value值  调用后台接口验证用户名是否可用 
+			   console.log("失焦事件",obj.value)
+		   }
+		</script>
+	</body>
+</html>

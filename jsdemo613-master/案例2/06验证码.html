@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   span{
+			   background-color: #FF0000;
+			   color: #ffffff;
+			   display: inline-block;
+			   padding: 3px 10px;
+			   font-size: 12px;
+			   border-radius: 5px;
+			   cursor: pointer;
+		   }
+		</style>
+	</head>
+	<body>
+		<input type="text" id="mobile" placeholder="手机号" />
+		<span onclick="send(this)">发送</span>
+		<input type="button" value="测试" onclick="console.log('---')" disabled="disabled" />
+		<script>
+		   function send(el){
+			   //如果已经发发送 点击无反应
+			   console.log(el.style.backgroundColor)
+			   if(el.innerText!="发送"){
+				   console.log("---------")
+				   return;
+			   }
+			     
+			   
+			   //获取手机号元素
+			   var obj=document.getElementById("mobile");
+			   //获取obj属性value
+			   if(obj.value==""){
+				   alert("手机号不能为空！");
+				   return;
+			   }
+			   
+			  //将按钮颜色改为不可用状态
+			  el.style.backgroundColor="#ccc";
+			  
+			  
+			   
+			   //声明变量 等待的时间
+			   var wait=10;
+			   
+			     el.innerHTML="("+wait+"s)";
+				 
+			   //创建一个定时器
+			   var timer=setInterval(function(){
+				   if(wait==1){
+					   //清除定时器
+					   clearInterval(timer);
+					   //恢复成可用状态 
+					   el.style.backgroundColor="#ff0000";
+					  
+				       el.innerHTML="发送";
+					   return;//程序不再继续执行
+				   }
+				   
+				   //更改wait的值
+				   wait--;
+				   
+				   el.innerHTML="("+wait+"s)";
+				  
+			   },1000)
+			   
+			  
+			   
+		   }
+		</script>
+	</body>
+</html>

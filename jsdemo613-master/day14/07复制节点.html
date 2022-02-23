@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <ul id="info">
+			<li>html</li>
+		</ul>
+		<script>
+		   var obj=document.querySelector("#info");
+		   var d=document.querySelector("#info li");
+		   console.log(d)
+		   var nnode=d.cloneNode();
+		   nnode.innerHTML="js";
+		   obj.appendChild(nnode);
+		   
+		   console.log(obj.contains(nnode))
+		   
+		   console.log(obj.hasChildNodes())
+		   console.log(nnode.hasChildNodes())
+		   console.log(nnode.getRootNode())
+		 
+		   
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" class="act">
+			用户名：<input type="text" />
+		    密码:<input type="password" />
+			</div>
+			<span></span>
+		<script>
+		     var obj=document.querySelector("div");
+			 console.log("obj下所有的子节点:",obj.childNodes)
+			 console.log("childs:",obj.children)
+			 console.log("node first:",obj.firstChild)
+			 console.log("element first:",obj.firstElementChild)
+			 console.log("last>>",obj.lastElementChild)
+			 console.log(obj.nextElementSibling)
+			 
+			 var username=obj.firstElementChild;
+			 console.log("username 的下一个兄弟元素",username.nextElementSibling)
+			 var pwd=obj.lastElementChild;
+			 console.log("pwd  上一个兄弟元素:",pwd.previousElementSibling)
+		
+		     console.log("obj属性:",obj.attributes)
+			 var atts=obj.attributes;
+			 console.log(atts[0])
+		
+		</script>
+	</body>
+</html>

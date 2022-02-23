@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   img{
+			   width: 20px;
+			   height: 20px;
+			   vertical-align: bottom;
+			   margin-right: 5px;
+			   cursor: pointer;
+		   }
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		  // 声明函数 创建单选按钮
+		   function init(){
+			   //创建图片元素
+			   var obj=document.createElement("img");
+			   //设置元素属性  src
+			   obj.src="images/uncheck.png";
+			   
+			   //获取div
+			   var div=document.querySelector("div");
+			   //将obj图片对象  追加到div下 做为子元素
+			   div.append(obj);
+			   //内容是文本节点
+			  
+			  //创建文本节点
+			  var txt=document.createTextNode("男");
+			  //将txt追加到div上
+			  div.append(txt);
+			  
+			  //给obj增加事件
+			  obj.onclick=function(){
+				  console.log(obj.src)
+				  if(obj.src.indexOf("images/uncheck.png")!=-1){
+					  obj.src="images/check.png";
+				  }else{
+					   obj.src="images/uncheck.png";
+				  }
+			  }
+		   }
+		   
+		   //调用函数
+		   init();
+		   
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   // ^要求以数字开头  $要求以数字结尾
+		    var reg=/^\d$/;
+			console.log(reg.test("1"))
+			console.log(reg.test("12"))
+			//代表数字最少出现1个
+			reg=/^\d+$/;
+			console.log(reg.test("12"))
+			console.log(reg.test("2"))
+			
+			//要求6位数字 
+			reg=/^\d{6}$/;
+			console.log(reg.test("223478"))
+			
+			
+		</script>
+	</body>
+</html>

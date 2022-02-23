@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	    body{
+			background-color: #F1F1F1;
+			margin: 0;
+		}
+	    .info{
+			width: 200px;
+			height: 200px;
+			border: #000000 solid 1px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+	<body>
+		
+		<div class="info"   onmousedown="msdown(event)">
+			
+		</div>
+		<script>
+		    function msdown(e){
+				//获取事件目标
+				var target=e.target;
+				
+				var x=e.pageX-target.offsetLeft,y=e.pageY-target.offsetTop;
+				//定义鼠标移事件 
+				
+				target.addEventListener("mousemove",msmove)
+				function msmove(event){
+					var tmpx=event.pageX-x;
+					var tmpy=event.pageY-y;
+					if(this.style.left){
+						this.style.left= tmpx+"px";
+						this.style.top=tmpy+"px";
+					}else{
+						this.style.left=this.offsetLeft || 0;
+						this.style.top=this.offsetTop || 0;
+					}
+				}
+				//定义 一个鼠标松开 事件
+				target.addEventListener("mouseup",function(){
+					//移除移动事件
+					target.removeEventListener("mousemove",msmove);
+				})
+				
+			}
+		
+		</script>
+	</body>
+</html>

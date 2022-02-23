@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			img {
+				width: 100px;
+				height: 100px;
+				position: relative;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 500px; height: 300px; position: absolute;">
+		<img src="images/1.jpg" /></div>
+
+		<script>
+			((function() {
+
+				//获取 img对象
+				var obj = document.querySelector("img")
+
+				//var maxLeft = document.body.offsetWidth - obj.offsetWidth - 1;
+			     var maxLeft=document.querySelector("div").offsetWidth-obj.offsetWidth;
+				var timer;
+
+				//从左向右
+				function toRight() {
+					timer = setInterval(function() {
+						if (obj.offsetLeft >= maxLeft) {
+							//清除定时器
+							clearInterval(timer);
+							  toLeft();
+						}
+						obj.style.left = obj.offsetLeft + 1 + "px";
+					    
+						//obj.style.top=obj.offsetTop+1+"px";
+						toBT();
+					}, 10);
+				}
+				
+				var maxTop=200;
+				var flag=true;//true表示向下移动  false表示向上移动
+				
+				function toBT(){
+					//向下移动
+					if(flag){
+						toBottom();
+					}else{
+						toTop();
+					}
+				}
+				
+				//从上向下 
+				function toBottom(){
+		
+					if(obj.offsetTop>=maxTop){
+						 flag=false;
+					}else{
+						//小于最大的顶部距离
+						obj.style.top=obj.offsetTop+1+"px";
+					}
+				}
+				
+				function toTop(){
+					if(obj.offsetTop==0){
+						flag=true;
+					}else{
+						obj.style.top=obj.offsetTop-1+"px";
+					}
+				}
+				
+
+
+				//从右往左
+				function toLeft() {
+					timer = setInterval(function() {
+
+						if (obj.offsetLeft == 0) {
+							//清除定时器
+							clearInterval(timer);
+							toRight();
+						}
+						obj.style.left = obj.offsetLeft - 1 + "px";
+					    toBT();
+					}, 10);
+				}
+
+				//執行方法
+				toRight();
+
+			})());
+		</script>
+	</body>
+</html>

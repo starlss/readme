@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   span{
+			   border:#ddd solid 1px;
+			   height: 30px;
+			   border-radius: 15px;
+			   display: inline-block;
+			   padding: 0 10px;
+		   }
+		   span img{
+			   width: 30px;
+			   height: 30px;
+			   vertical-align:middle;
+			   cursor: pointer;
+		   }
+		   span input{
+			  border: 0; 
+			  border-style: none;
+			  height: 28px;
+			  border-radius: 15px;
+		   }
+		</style>
+	</head>
+	<body>
+		<span>
+			<input type="text" placeholder="请输入商品名称" />
+			<img src="images/search.png" onclick="search(this)" />
+		</span>
+		
+		<script>
+		//  el 是形式参数  实参传的是this  代表的元素本身 
+		   function search(el){
+			   
+			   //获取文本框
+			   var obj=document.querySelector("input");
+			   
+			  //判断如果当前按钮是搜索 
+			  if(el.src.indexOf("images/search.png")!=-1){
+				  //执行搜索功能
+				  //判断值是否为空
+				  if(obj.value=="")
+				     return; //返回  
+					 console.log("搜索的内容：",obj.value)
+					 //同时将搜索按钮改成清除按钮
+					 el.src="images/close.png";
+			  }else{
+				  //执行清除功能 
+				  //直接将值清空 赋值
+				  obj.value="";
+				  //同时将清除按钮改成搜索
+				  el.src="images/search.png";
+			  }
+			   
+			 
+			  
+			  
+					 
+		   }
+		</script>
+	</body>
+</html>

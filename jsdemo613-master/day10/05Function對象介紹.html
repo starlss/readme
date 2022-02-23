@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   function sum(x,y){
+			   console.log("x==",x)
+		   }
+		   
+		   console.log(sum.constructor===Function)
+		   console.log("函數sum的原型：",Function.prototype)
+		  //把sum做為構造函數
+		  var s=new sum(5,6);
+		  console.log(s)
+		   
+		
+		</script>
+	</body>
+</html>

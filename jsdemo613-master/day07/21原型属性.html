@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+        
+        var obj={};  
+        console.log(obj)
+       
+       // function Test(){}
+       
+       var o={
+           x:12,
+           y:5
+       };
+        
+        //更改obj的原型 
+      //  obj.__proto__=Test.prototype;
+     // obj.__proto__=o;
+      
+     //访问原型 不建议直接访问属性__proto__
+     // console.log(obj.__proto__)
+        
+        console.log(Object.getPrototypeOf(obj))
+        </script>
+    </body>
+</html>

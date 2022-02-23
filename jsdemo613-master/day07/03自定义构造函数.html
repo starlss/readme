@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            //定义一个函数 接收两个参数 
+            //  this  指针  指向对象本身 
+            //这里是一种数据类型 
+            function  Maths(x,y){
+                //将变量x y的值赋值给对象Maths的属性x y
+                this.x=x;
+                this.y=y;
+            }
+            
+            console.log(Maths.prototype)
+            
+            var obj=new Maths(2,7);
+            
+            for(var m in obj){
+                console.log(obj[m])
+            }
+        </script>
+    </body>
+</html>

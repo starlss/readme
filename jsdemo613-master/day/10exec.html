@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var reg=/\w+/g;
+		   var s="hello world";
+		  /* var rs=reg.exec(s);
+		   console.log(rs==null)*/
+		   var tmp;
+		   while((tmp=reg.exec(s))!==null){
+			   console.log(tmp)
+		   }
+		   
+		</script>
+	</body>
+</html>

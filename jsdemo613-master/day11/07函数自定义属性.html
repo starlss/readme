@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		    function Math(){
+				Math.counter++;
+			}
+			
+			//给函数增加属性 静态属性
+			Math.counter=0;
+			// 静态函数 
+			Math.info=function(){
+				console.log("======info====")
+			}
+			
+			Math.info();
+			
+			var m1=new Math();
+			
+			console.log(m1)
+			var m2=new Math();
+			console.log(m2)
+			//只能通过函数名来访问
+			console.log("c=",Math.counter)
+			
+			
+			//如果我想让m1 m2都同时具有一个属性
+			//给原型上增加属性
+			Math.prototype.x=23;
+			m1.x=34;//给对象m1增加了属性 
+			console.log(m1)
+			console.log(m2)
+			
+		</script>
+	</body>
+</html>

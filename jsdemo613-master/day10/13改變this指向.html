@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   var a1=['hello','world'];
+		   //正常情況下 增加值  a1是對象  push是方法
+		   a1.push("?");
+		   
+		   var b=[];
+		   //通過apply來調用  
+		  var tmp= a1.push.apply(b,[12,23])
+		  console.log("tmp==",tmp)
+		  console.log("b==",b)
+		   //通過call
+		 var tmp2=  a1.push.call(a1,"ok")
+		 console.log("tmp2==",tmp2)
+		   
+		   console.log(a1)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>窗口控制</title>
+	</head>
+	<body>
+		
+		<input type="button" value="向右" onclick="test()" />
+		
+		<input type="button" value="向左" onclick="moveBy(-100,-50)" />
+		
+		<input type="button" value="移动到中间" onclick="moveBy(300,100)" />
+		
+		
+		<input type="button" value="加大" onclick="resizeBy(100,100)" />
+		<input type="button" value="减小" onclick="resizeBy(-100,-100)" />
+		
+		
+		<input type="button" value="300" onclick="resizeTo(300,300)" />
+		<input type="button" value="50" onclick="resizeTo(50,50)" />
+		
+		
+		<input type="button" value="水平滚动" onclick="window.scrollBy(1800,100)" />
+		<input type="button" value="垂直滚动" onclick="st()" />
+		
+		<input type="button" value="失焦" onclick="window.blur()" />
+		
+			<input type="button" value="关闭窗口" onclick="window.close()" />
+			
+				<input type="button" value="消息" onclick="window.alert('欢迎光临')" />
+		    
+		
+		  <input type="button" value="删除" onclick="del()" />
+		
+		<div style="width: 5000px;height:5000px ; background-color: #008000;">
+			sssssssssssss233333333333333lllllllllllllllll2339999999zdfpaaaaaaaaaaaaaaaaaaad9sdfff
+		</div>
+		
+		<script>
+		
+		     function input(){
+				var result = window.prompt("请输入你的年龄：",14);
+				console.log("年龄：",result)
+			 }
+			 input();
+		
+		      function del(){
+				var  result = window.confirm("确认要删除吗？");
+				console.log(result)
+			  }
+		
+		     function test(){
+				 console.log("--------")
+				 window.moveBy(200,50);
+			 }
+			 
+			 function sc(){console.log("---")
+			 window.scrollBy(1300,100)
+				/* window.scrollBy({
+					 left:1300,
+					 top:100,
+					 behavior:"instant"
+				 });*/
+			 }
+			 
+			 function st(){
+				 
+				 window.scrollTo({
+					 left:0,
+					 top:1800,
+					 behavior:"smooth"
+				 })
+			 }
+		</script>
+	</body>
+</html>

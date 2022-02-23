@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test1(){
+            var name="张三";//局部变量 
+            console.log("test1方法中访问name:",name)
+            
+            //在方法内部再定义一个方法  
+            function test2(){
+                var age=23;
+                console.log("test2中访问test1的name值：",name)
+                console.log("test2中访age值：",age)
+            } 
+
+            //调用test2
+            test2();
+            console.log("test1中访问test2方法中的age:",age)
+
+        }
+
+        //调用 
+        test1();
+        //外部访问name
+        console.log("外部访问name:",name)
+    </script>
+</body>
+</html>

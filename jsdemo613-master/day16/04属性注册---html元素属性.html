@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   .info{
+			   width: 100px;
+			   height: 100px;
+			   background-color: #008000;
+			   margin-top: 10px;
+		   }
+		</style>
+	</head>
+	<body>
+		<div onclick="alert('hello')"  class="info">
+		</div>
+		
+		<div onclick="var i=3;var j=6;var z=i*j;alert(z);"  class="info">
+		</div>
+		
+		<div onclick="test()"  class="info">
+		</div>
+		<script>
+		   function test(){
+			   var i=3;var j=6;var z=i*j;alert("z的值為"+z);
+		   }
+		</script>
+	</body>
+</html>

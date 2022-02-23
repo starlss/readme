@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		
+		   function User(name,age){
+			 //console.log(name+"的年龄是"+age)
+			 //给该函数增加属性  直接通过this来增加 
+			 this.name=name;
+			 this.age=age;
+			 this.info=function(){
+				 console.log(this.name+"的年龄是"+this.age)
+			 }
+			 
+		   }
+		   
+		   //在构造函数User上扩展属性时  
+		   User.x=34;//静态属性 属于构造函数 只能通过构造函数引用 
+		   console.log(User.x)
+		   //在构造函数上增加后 所有的该类型的对象都具备属性 
+		   //只能在原型上扩展  
+		   User.prototype.xx=12;
+		   User.prototype.trim=function(){
+			   //在这里直接通过this引用其它属性 
+			   
+		   }
+		   
+		   //函数直接调用  它就是普通函数 
+		   User("abc",23);
+		   
+		   
+		   //当你将函数当成构造函数时 它就是数据类型 
+		   //使用new来创建该函数类型的对象   
+		   //u也是变量 如果变量的类型是引用类型 我们称为对象   实例  
+		   let u=new User("张三",45);
+		   let u2=new User("ll",12);
+		   console.log(u)
+		   u.x=12;
+		   console.log(u)
+		   console.log(u2.xx)
+		   
+		 
+		
+		</script>
+	</body>
+</html>

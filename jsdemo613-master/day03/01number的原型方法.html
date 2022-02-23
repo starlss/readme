@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var x=1325542;  //基本类型 
+          console.log(typeof x);
+          //当调用基本类型(number string boolean)的属性或方法时，Js会把变量转换为对应的包装类型对象
+          //x=x.toString();//将x转换为Number类型的对象  
+         // console.log(typeof x);
+          //当调用完属性或方法后，或者如下增加属性x.age  ，js会把这个临时对象立即销毁 
+          //x.age=12;
+         // console.log(x.age)
+
+         //删除的 x.toSource();
+         console.log(x.toPrecision(5))
+
+         //用Number来构造一个对象  通过new 来创建的 
+         //var tmp=new Number(10.125678);
+        // console.log(tmp.toFixed(3))
+         console.log(x.toLocaleString('zh', { style: 'percent' }))
+
+
+    </script>
+</body>
+</html>

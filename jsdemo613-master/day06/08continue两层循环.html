@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+        var i=1;
+        outer:
+        while(i<=9){
+            
+            //内循环
+            var j=1;
+            while(j<=i){
+                if(i>3 && i==j ){
+                    i++; document.write("<br/>");
+                    continue outer;
+                }
+                 
+                  
+                document.write(j+"*"+i+"="+(j*i)+"&nbsp;&nbsp;")
+                j++;
+              
+            }
+            
+            document.write("<br/>");
+            i++;
+            
+        }
+        </script>
+    </body>
+</html>

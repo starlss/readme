@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           "use strict"
+           
+           var obj={
+               name:"abc"
+           };
+           
+           /*with(obj){
+               console.log(name)
+           }*/
+          var  username="abc";
+           console.log(username)
+           debugger;
+           function test(x,y){
+                 console.log(this)
+               this.x=x;
+               this.y=y;
+          test(3,5);
+        </script>
+    </body>
+</html>

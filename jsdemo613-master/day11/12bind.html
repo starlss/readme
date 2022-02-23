@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		    var x=12;
+			
+			function test(){
+				//this 默认指向全局对象 
+				//console.log(this)
+				console.log("x===",this.x);
+			}
+			
+			test();
+			
+			var obj={
+				x:89
+			};
+			
+		   	test.bind(obj)();
+			//tmp();
+			
+			console.log(test.toString())
+			
+			
+			
+		</script>
+	</body>
+</html>

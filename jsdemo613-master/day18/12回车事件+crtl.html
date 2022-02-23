@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="08鼠标拖动.html">
+			
+			用户名：<input type="text" name="username" /><br>
+			<input type="button" value="登录"   />
+		</form>
+		<script>
+		   function key(event){
+			  //判断键盘事件是否是回车键
+			  if(event.key=="Enter"){
+				  document.querySelector("form").submit();
+			  }
+		   }
+		   
+		   document.onkeyup=function(event){
+			 //判断键盘事件是否是回车键
+			 if(event.key=="Enter" && event.ctrlKey==true &&event.shiftKey==true){
+			 	 document.querySelector("form").submit();
+			 }
+		   }
+		</script>
+	</body>
+</html>

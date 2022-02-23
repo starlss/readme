@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <ul id="info">
+			<li>html</li>
+		</ul>
+		<script>
+		   var obj=document.querySelector("#info");
+		   //在当前节点ul 下增加一个li节点
+		   //创建li元素
+		   var c1=document.createElement("li");
+		   c1.innerHTML="css";
+		   
+		   //将c1添加到ul后面
+		   obj.appendChild(c1);
+		   
+		   
+		   //要替换的节点
+		   var c2=document.createElement("li");
+		   c2.innerHTML="js";
+		   
+		  var tmp= obj.replaceChild(c2,c1);
+		  console.log("tmp>>",tmp)
+		   
+		</script>
+	</body>
+</html>

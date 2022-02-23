@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function setage(age){
+                if(age<18)
+                   throw new Error("该员工未成年，不能录入系统！");
+                   console.log("成功录入年龄")
+            }
+            
+            var age=prompt("请输入员工年龄：");
+            age=parseInt(age);
+            try{
+                setage(age);
+            }finally{}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   //验证最少6位的字符串（字母数字_）
+		   var reg=/^\w{6,}$/;
+		   console.log(reg.test("abc"))
+		    console.log(reg.test("abc123"))
+			 console.log(reg.test("_abc_23"))
+			  console.log(reg.test("abc$"))
+		</script>
+	</body>
+</html>

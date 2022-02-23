@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		  var obj={
+			  name:"張三",
+			  age:23,
+			  info:function(){
+				  //this  代表對象obj本身 
+				  console.log(this.name+"的年齡是"+this.age)
+			  }
+		  };
+		  
+		  //對象方法調用  
+		  obj.info();
+		</script>
+	</body>
+</html>

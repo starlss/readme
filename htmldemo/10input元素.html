@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	  /* input{
+		   width: 300px;
+		   height: 30px;
+	   }*/
+	   
+	   .ipt{
+		   width: 300px;
+		   height: 30px;
+	   }
+	</style>
+	<body>
+		<!--
+		   form  表单  
+		   属性：
+		   method  指明表单提交的方式    
+		   action 表单提交的地址   
+		   enctype="application/x-www-form-urlencoded"  默认表单数据提交  
+		   enctype="multipart/form-data"  以二进制数据传递 通常应用于文件 上传  
+		-->
+		<form method="post" action="11formResult.html" name="productForm" onsubmit="return save();">
+			<div>
+				<span style="color: #FF0000;">*</span>
+				<span >产品名称</span>
+				<!--
+			   input 元素  文本框    text
+			   重要属性：
+			   type  指明文本框的类型  
+			   placeholder 提示信息 
+			   name  元素的名称
+			   value  元素的值   
+			-->
+				<input type="text" class="ipt" placeholder="请输入产品名称" disabled="disabled" id="productname" name="productname" />
+			</div>
+
+			<div>
+				<span>是否热门</span>
+				<input type="radio" value="1" checked="checked" name="ishot" />是
+				<input type="radio" value="0" name="ishot" />否
+			</div>
+
+			<div>
+				<span>图片</span>
+				<input type="file" />
+			</div>
+
+			<div>
+				<span>标签</span>
+				<!--复选框   允许选择多个  -->
+				<input type="checkbox" name="tags" value="正品" />正品
+				<input type="checkbox" name="tags" value="新上市" />新上市
+				<input type="checkbox" name="tags" value="好评" />好评
+			</div>
+			<div>
+
+				<div>
+					<span>价格</span>
+					<input type="number" class="ipt" readonly="readonly" title="请输入价格" placeholder="请输入价格" />
+				</div>
+
+				<div>
+					<span>密码</span>
+					<input type="password" class="ipt" maxlength="3" />
+				</div>
+
+				<div>
+					<span>颜色</span>
+					<input type="color" />
+				</div>
+				<div>
+					<span>日期</span>
+					<input type="date" />
+				</div>
+				<div>
+					<span>时间</span>
+					<input type="datetime-local" />
+				</div>
+				<div>
+					<span>图片</span>
+					<input type="image" src="./images/1.jpg" />
+				</div>
+				
+				<div>
+					<span>年龄</span>
+					<input  type="range" min="1" max="100" onchange="chg(this)"   />
+					<span id="age"></span>
+				</div>
+				
+                <div>
+					<span>
+						描述
+					</span>
+					<textarea rows="5" cols="50"  style="resize: none;"></textarea>
+				</div>
+
+                 <div>
+					 <span>所属类别</span>
+					 <select   value="02">
+						 <option value="01">电器 </option>
+						  <option value="02" selected="selected">服装 </option>
+						  <option value="ssd">34334 </option>
+						   <option value="sa">sdss </option>
+					 </select>
+				 </div>
+				<!--submit   提交按钮  当点击时会触发form表单将请求提交给action  -->
+				<input type="submit" value="保存" disabled="disabled" />
+				<input type="reset" value="重置" />
+				<input type="button" value="测试" onclick="alert('hello')" />
+				
+				<div class="btn">保存</div>
+			</div>
+		</form>
+		
+		<style>
+		   .btn{
+			   width: 200px;
+			   height: 25px;
+			   background-color: #FF0000;
+			   color: #fff;
+			   border-radius: 15px;
+			   text-align: center;
+		   }
+		</style>
+		
+		<script>
+		   function chg(obj){
+			  // console.log(">>>>>>>>>>",obj.value)
+			   document.getElementById("age").innerHTML=obj.value;
+		   }
+		   
+		   function save(){
+			   let name=document.getElementById("productname").value;
+			 // let name= document.forms.productForm.productname.value;
+			  if(name==""){
+				  alert("产品名称不能为空！");
+				  return false;
+			  }
+			  return true;
+		   }
+		</script>
+	</body>
+</html>

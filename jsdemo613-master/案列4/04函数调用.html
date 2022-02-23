@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		     var x=4,y=12;
+			 function test(){
+				 console.log(">>>",this.x+this.y)
+			 }
+			 //做为普通函数来调用  
+			 test();
+			 //做为对象的属性值   方法
+			 //将函数赋值给对象属性  这个函数称为方法
+			 var obj={
+				 info:test//这是赋值
+			 };
+			 
+			 var tmp={
+			 		x:100,
+			 		y:23
+			 };
+			 
+			 //做为方法调用 obj里没有x y  我想它的值使用tmp对象里的值
+			 obj.info();
+			 //call
+			 obj.info.call(tmp);
+			 obj.info.apply(tmp);
+			 
+			 //更改test this指向
+			 test.call(tmp);
+			 test.apply(tmp);
+			 
+			 //純粹調用方法
+			 test.call();
+			 test.apply();
+			
+			 //当你想更改this指向时  可以考虑使用call  apply
+			 
+		</script>
+	</body>
+</html>

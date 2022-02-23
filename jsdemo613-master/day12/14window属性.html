@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		  <input type="button" value="测试" onclick="op()" />
+		   <input type="button" value="状态" onclick="op2()" />
+		   
+		   <iframe src="01导航对象.html" width="500" height="300"></iframe>
+		<div style="width: 5000px; height: 5000px; background-color: #008000;"></div>
+		<script>
+		    var obj;
+			function op(){
+				obj=window.open("01导航对象.html","","width=399,height=394");
+			}
+			function op2(){
+				console.log(obj.closed)
+			}
+			
+			console.log("self:",window.self)
+			console.log("parent",window.parent)
+		
+		   console.log(window.screenLeft)
+		   console.log(window.screenX)
+		   console.log(window.screenTop)
+		   console.log("window.scrollX=",window.scrollX,window.pageXOffset)
+		   console.log("window.scrolly=",window.scrollY)
+		   console.log("高度",window.outerHeight,window.innerHeight)
+		   console.log("宽度:",window.outerWidth,window.innerWidth)
+		</script>
+	</body>
+</html>

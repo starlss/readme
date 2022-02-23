@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		  span{
+			  color: #ddd;
+			  font-size: 10px;
+			  position: relative;
+			  left: -50px;
+			  top: -5px;
+		  }
+		</style>
+	</head>
+	<body>
+		<textarea oninput="chg(this)" rows="5" cols="30" placeholder="评论内容"></textarea>
+	    <span>0/200字</span>
+		<script>
+		// 最大字数
+		    var maxWord=200;
+		   function chg(el){
+			   //获取文本框的内容的长度
+			   var len =el.value.length;
+			   if(len>=maxWord){
+				  //更改内容
+				  el.value=el.value.substring(0,maxWord);
+			   }
+			   //获取span
+			   var obj=document.querySelector("span");
+			   obj.innerHTML=el.value.length+"/"+maxWord+"字";
+		   }
+		</script>
+	</body>
+</html>

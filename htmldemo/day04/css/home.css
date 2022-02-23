@@ -1,0 +1,29 @@
+
+body{
+	background-color: #DDDDDD;
+	margin: 0;
+	padding: 0;
+	font-size: 0.28rem;
+}
+
+.menus{
+	height: 2.6rem;
+	width: 7.5rem;
+	background-color: #fff;
+	text-align: center;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+.item{
+	width: 1.5rem;
+	height: 1.2rem;
+}
+.item img{
+	width: 0.6rem;
+	height: 0.6rem;
+	margin-top: 0.1rem;
+}
+.item div{
+	color: #666;
+}

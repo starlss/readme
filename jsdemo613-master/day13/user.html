@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		    .tab{
+				width: 90%;
+				margin: auto;
+				background-color: #ccc;
+				
+			}
+			tr,td{
+				line-height: 28px;
+				font-size: 14px;
+				text-align: center;
+			}
+			.trb{
+				background-color: #eee;
+			}
+			.trw{
+				background-color: #ffffff;
+			}
+			
+			.add{
+				width: 550px;
+				height: 320px; 
+				background-color: #f1f1f1;
+				position: absolute;
+				top: 100px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.hid{
+				display: none;
+			}
+			.add div{
+				line-height: 40px;
+				padding-left: 30px;
+			}
+			.add div input{
+				margin-left: 20px;
+			}
+			a{
+				font-size: 14px;
+				text-decoration: none;
+			}
+			.ipt{
+				width: 230px;
+				line-height: 20px;
+			}
+			#page a{
+				margin-left: 20px;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<div style="width: 90%;margin: 10px auto;">
+			<a href="javascript:add()">添加</a>
+		</div>
+		<!--会员列表-->
+	    <table class="tab" border="0" cellpadding="0" cellspacing="1">
+			<tr class="trb"> 
+				<td>序号</td>
+				<td>用户名</td>
+				<td>手机号</td>
+				<td>email</td>
+				<td>操作</td>
+			</tr>
+			<tbody id="userlist"></tbody>
+		</table>
+		
+		<div style="width: 90%;margin: 10px auto; text-align: right;" id="page">
+			
+		</div>
+		
+		<!--添加会同-->
+		<div class="add hid" id="save">
+			<div style="line-height: 60px; background-color: #ccc;text-align: center;font-size: 24px;">
+				添加会员
+			</div>
+			<div>
+				用户名:<input type="text" id="username" class="ipt" />
+				<span style="color: #FF0000;">*</span>
+				<span id="usernameerror"></span>
+			</div>
+			<div>
+				密&nbsp;&nbsp;&nbsp;&nbsp;码:<input class="ipt" / type="password" id="password" />
+			</div>
+			<div>
+				手机号:<input type="text" id="mobile" class="ipt" / />
+			</div>
+			<div>
+				邮&nbsp;&nbsp;&nbsp;&nbsp;箱:<input class="ipt" / type="text" id="email" />
+			</div>
+			<div>
+				爱&nbsp;&nbsp;&nbsp;&nbsp;好:
+				<input type="checkbox"  value="读书" name="hobby" />读书
+				<input type="checkbox" value="写字" name="hobby" />写字
+				<input type="checkbox" value="玩游戏" name="hobby" />玩游戏
+			</div>
+			<div>
+				<input type="button"  onclick="save()" style="margin: 30px auto" value="保存" />
+				<input type="button"  style="margin: 30px auto" value="取消" onclick="cls()" />
+			</div>
+		</div>
+			<script src="user.js"></script>
+	</body>
+</html>

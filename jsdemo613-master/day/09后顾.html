@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//  向右代表前 向左代表后 
+		//匹配win 要求win的后面是7  8  xp
+		   var reg=/(?<=7|8|xp)win/;
+		   console.log(reg.test("7win"));
+		    console.log(reg.test("abcwin"));
+			
+			//reg=/(?<!7|8|xp)win/;
+			reg=new RegExp("(?<!7|8|xp)win");
+			console.log(reg.test("7win"));
+			 console.log(reg.test("abcwin"));
+		</script>
+	</body>
+</html>

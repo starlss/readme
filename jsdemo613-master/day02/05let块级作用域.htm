@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       //全局作用域
+
+       {
+        let name="张三";
+        var name2="lily";
+
+        console.log("代码块内访问name>",name,"name2",name2)
+      }
+ 
+
+        console.log("name>",name,"name2",window.name2)
+
+    
+
+    </script>
+</body>
+</html>

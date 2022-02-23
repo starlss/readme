@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			select {
+				width: 120px;
+				height: 26px;
+			}
+		</style>
+	</head>
+	<body>
+		地区:
+		<select id="province" onchange="chg(this)">
+			<option >所在省</option>
+		</select>
+		<select id="city" onchange="chg2(this)">
+			<option>所在市</option>
+		</select>
+		<select id="area">
+			<option>所在区</option>
+		</select>
+		<script>
+			var data = [{
+					name: "河南",
+					children: [{
+							name: "郑州",
+							children: ["金水区", "高新区"]
+						},
+						{
+							name: "开封",
+							children: ["A区", "B区"]
+						}
+					]
+				},
+				{
+					name: "河北",
+					children: [{
+							name: "石家庄",
+							children: ["东区", "西区"]
+						},
+						{
+							name: "邯郸",
+							children: ["c区", "d区"]
+						}
+					]
+				}
+			];
+			
+			//定义全局变量 
+			var currentProvince;
+			
+			
+			function init(){
+				//获取省下拉列表
+				var province=document.getElementById("province");
+				//遍历data  获取省
+				data.forEach(function(pro){
+					 createOption(province,pro.name);
+				})
+			}
+			
+			
+			//创建下拉选项
+			function createOption(target,val){
+				var opt=document.createElement("option");
+				//设置value属性
+				opt.setAttribute("value",val);
+				//设置显示的内容
+				opt.innerText=val;
+				//追加到父元素上
+				target.append(opt);
+			}
+			
+			//当城市改变的时候
+			function chg2(obj){
+				var city=obj.value;
+				if(city=="所在市")
+				   return;
+				//获取地区
+				var area=document.querySelector("#area");
+				//清除数据
+				area.innerHTML="";
+				createOption(area,"所在区");
+				//遍历data
+				outer:
+				for(var i=0;i<data.length;i++){
+					var tmp=data[i];
+					if(tmp.name==currentProvince){
+						 
+						 var tmpcity= tmp.children;
+						 //遍历城市 
+						for(var j=0;j<tmpcity.length;j++){
+							//临时城市 
+							var ct=tmpcity[j];
+							//判断选中的城市 
+							if(ct.name==city){
+								
+								//遍历城市 下的地区
+								ct.children.forEach(function(a){
+									createOption(area,a);
+								})
+								
+								break outer;
+							}
+						}
+						 
+						break;
+					}
+				}
+				   
+			}
+			
+			
+			//当选择省份改变时 
+			function chg(obj){
+				var pro=obj.value;
+				//如果没有省份 返回
+				if(pro=="所在省")
+				  return;
+				  
+				currentProvince=pro;
+				//不建议使用forEach
+				//获取城市下拉列表
+				var city=document.querySelector("#city");
+				//清除数据
+				city.innerHTML="";
+				createOption(city,"所在市");
+				for(var i=0;i<data.length;i++){
+					//获取临时对象
+					var tmp=data[i];
+					//说明找到了省 
+					if(pro==tmp.name){
+						 //遍历更新城市
+						 tmp.children.forEach(function(el){
+							 createOption(city,el.name);
+						 })
+						break;//中止循环 
+					}
+				}
+			}
+			
+			init();
+		</script>
+	</body>
+</html>

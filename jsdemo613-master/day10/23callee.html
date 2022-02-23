@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		    //用递归函数求出1到10的和 
+			//计算1到target的和 
+			/**
+			 * @param {Object} target
+			 *  target=3  
+			 *  3+sum(2)
+			 *  3+2+sum(1)
+			 *  3+2+1  
+			 */
+			/*function sum(target){
+				if(target==1)
+				    return 1;
+				return  target+sum(--target);
+			}
+			
+			console.log(sum(5))*/
+			
+			var rs=(function(t){
+				if(t==1)
+				  return 1;
+				return t+arguments.callee(--t);  
+			})(4);
+			
+			console.log(rs)
+			
+			
+		</script>
+	</body>
+</html>

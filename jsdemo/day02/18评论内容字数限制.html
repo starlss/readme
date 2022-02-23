@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		  span{
+			  color: #999;
+			  font-size: 12px;
+			  position: relative;
+			  left: -34px;
+			  top: -5px;
+		  }
+		  textarea{
+			  resize: none;
+			  outline: none;
+		  }
+		</style>
+		<script>
+		     function chg(e){
+				 let obj=e.target;
+				 //获取输入内容的长度  
+				 let len=obj.value.length;
+				 if(len>10){
+					obj.value=obj.value.substring(0,10);
+				 }
+				 //更改span的内容  
+				 let span=document.getElementById("info");
+				 span.innerText=obj.value.length+"/10";
+			 }
+		</script>
+	</head>
+	<body>
+		评论:<textarea rows="5" cols="50" oninput="chg(event)"></textarea>
+		<span id="info">0/10</span>
+		
+	</body>
+</html>

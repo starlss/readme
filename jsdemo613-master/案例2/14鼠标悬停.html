@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		    .dialog{
+				width: 300px;
+				height: 100px;
+				border: #ccc solid 1px;
+				border-radius: 5px;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-top: 100px;
+				display: none;
+				z-index: 10;
+				background-color: #ffffff;
+			}
+			.dialog img{
+				width: 30px;
+				height: 30px;
+				position: relative;
+				left: 270px;
+				cursor: pointer;
+			}
+			
+			.confirm{
+				text-align: center;
+			}
+			html,body{
+				height: 100%;
+			}
+			
+			.zz{
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.2);
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+				z-index: 3;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<span onmouseover="del()">删除</span>
+		
+		<!--遮罩层-->
+		<div class="zz"></div>
+		
+		<div class="dialog">
+			<img src="images/cls.png" onclick="cls()"/>
+		   <div class="confirm">您确定要删除吗?</div>
+		   <div style="text-align: right;margin-top: 10px;padding-right: 20px;">
+			   <input type="button" value="确认" />
+			   <input type="button" value="取消" onclick="cls()" />
+		   </div>
+		</div>
+		
+		<script>
+		    function del(){
+				document.querySelector(".zz").style.display="block";
+				document.querySelector(".dialog").style.display="block";
+			}
+			function cls(){
+				document.querySelector(".zz").style.display="none";
+				document.querySelector(".dialog").style.display="none";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = [2, 3, 5, ['a', 'b', ['one', 'two']]];
+			console.log(a)
+
+			//将数组a转换成字符串
+			// var  s=a.toString();
+			/*var s=a.join();
+			 console.log(s)
+			 var a2=s.split(",");
+			 console.log(a2)*/
+
+			function test(arr, dst) {
+				if (!arr || !Array.isArray(arr))
+					return;
+				//如果dst 不存在 
+				dst = dst || [];
+				// 遍历
+				arr.forEach(function(el) {
+					//判断当前元素是否是数组
+					if (Array.isArray(el)) {
+						//递归调用 函数
+						test(el, dst);
+					} else {
+						dst.push(el);
+					}
+				})
+			}
+
+
+
+			var a2 = [];
+			//扁平化
+			test(a, a2);
+			console.log(a2)
+
+
+			function test2(src, dst) {
+				src.forEach(function(el) {
+					if (Array.isArray(el)) {
+						dst=test2(el, dst);
+					} else {
+						//dst += el + ",";
+						dst=dst.concat(el,",")
+					}
+				})
+				return dst;
+			}
+			var s2 = test2(a, "");
+			console.log(s2)
+		</script>
+	</body>
+</html>

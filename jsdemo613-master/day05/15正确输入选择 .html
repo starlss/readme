@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+            console.log("请选择服务语言:")
+            
+            //初始条件  声明一个变量 
+             var choose;
+             
+             //循环体
+               do{
+            
+                 choose=prompt("请选择服务语言");//根据用户输入  重新赋值
+                 choose=parseInt(choose);
+                if(choose==1){
+                    console.log("中文服务")
+                }else if(choose==2){
+                    console.log("english");
+                }else{
+                    console.log("请重新选择语言:")
+                }
+            }  while(choose!=1 && choose!=2);
+        </script>
+	</body>
+</html>

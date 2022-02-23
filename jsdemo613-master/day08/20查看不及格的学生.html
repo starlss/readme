@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var score=[
+                {name:"张三",code:"001",course:"js",score:78},
+                {name:"abc",code:"002",course:"js",score:58},
+                {name:"hello",code:"003",course:"js",score:98}
+            ];
+            //列出不及格的人員信息 
+            var rs=score.filter(function(stu){
+               return stu.score<60; 
+            });
+            console.log(JSON.stringify(rs))
+        </script>
+    </body>
+</html>

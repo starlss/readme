@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		   
+		    /**
+			 * 求参数的和 
+			 * @param {Object} x  第一个参数
+			 * @param {Object} y  第二个参数
+			 * @param  [arg1,[arg2,...]] 
+			 */
+		    function  sum(x,y){
+				console.log(arguments)
+				var rs=0;
+				for(var i in arguments){
+					rs+=arguments[i];
+				}
+				console.log("结果：",rs)
+			}
+			
+		sum(1,3,5,9);
+			
+		
+		</script>
+	</body>
+</html>

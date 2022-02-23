@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="兼容浏览器" />
+		
+		<script>
+		    function registerEvent(targetObject,eventType,handler){
+				//说明支持addEventListener注册监听
+				if(targetObject.addEventListener){
+					targetObject.addEventListener(eventType,handler,false);
+				}else if(targetObject.attachEvent){
+					targetObject.attachEvent("on"+eventType,handler);
+				}
+			}
+			var btn=document.getElementById("btn");
+			
+			
+			registerEvent(btn,"click",function(){
+				console.log("---------第二次-------")
+			});
+			registerEvent(btn,"click",function(){
+				console.log("---------兼容浏览器事件-------")
+			});
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		用户名：<input type="text" value="hello" id="username" />
+		<br/>
+		<input type="button" id="btn" value="保存" />
+		<script>
+		   //获取文本框的值
+		   var button=document.getElementById("btn");
+		   //保存按钮点击时执行
+		   button.onclick=function(){
+			   // 获取用户名
+			   var uobj=document.getElementById("username");
+			   console.log(uobj.value)
+		   }
+		</script>
+	</body>
+</html>

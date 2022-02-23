@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="17阻止冒泡事件.html"  onclick="canelHandler(event)">阻止默认行为</a>
+		<a href="17阻止冒泡事件.html" id="lk" >阻止默认行为 2</a>
+		<script>
+		  var a=document.getElementById("lk");
+		  a.addEventListener("click",function(event){
+			  canelHandler(event);
+		  })
+		 /* a.attachEvent("onclick",function(event){
+			  canelHandler(event)
+		  })*/
+		  function canelHandler(event){
+			  console.log("event.returnValue==",event.returnValue)
+			  //如果event存在用event ，否则使用全局window.event
+			  //兼容IE9之前的版本 
+			  event=event || window.event; 
+			  if(event.preventDefault)
+			    event.preventDefault();//addeventlistener事件
+			  if(event.returnValue==undefined)
+				event.returnValue=false;//ie9之前 attachEvent
+			  return false; //属性注册事件  		
+		  }
+		</script>
+	</body>
+</html>

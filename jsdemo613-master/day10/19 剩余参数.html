@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		
+		   /**
+			*    ...参数名  表示剩余参数 
+			*/
+		   function sum(...args){
+			  console.log("arguments:",arguments);
+			  console.log("args:",args)
+			  var rs=0;
+			  for(var a in args){
+				  rs+=args[a];
+			  }
+			  console.log("rs>>",rs)
+		   }
+		   
+		   sum(3,5,3,8);
+		</script>
+	</body>
+</html>

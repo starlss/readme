@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            //构造函数 
+             function Student(){
+             }
+             
+             //创建一个对象
+             let obj={
+                 name:"ok",
+                 info:function(){
+                     console.log("------obj--")
+                 }
+             };
+             
+             //更改了Student的原型  原本是构造函数 现在变成了obj
+             Student.prototype=obj;
+             
+             console.log("Student的原型:",Student.prototype)
+             
+             var s=new Student();
+             console.log(s)
+              console.log(Student.prototype===s.__proto__)
+        </script>
+    </body>
+</html>

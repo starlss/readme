@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//深拷贝 
+		  var a1=[2,5,7,8,['a','b',['one','two']]];
+		  
+		  //深copy
+		  function copy(src,dst){
+			  src.forEach(function(el){
+				  //判断el是否是引用类型 
+				  if(typeof el === "object"){
+					  //创建一个新的对象存储el 然后加入dst
+					  var newarray=[];
+					  //递归
+					  copy(el,newarray);
+					  //把newarray加入到dst 
+					  dst.push(newarray);
+				  }else{
+					  dst.push(el);
+				  }
+			  })
+		  }
+		  
+		  var a2=[];
+		  copy(a1,a2);
+		  
+		  console.log("a1",a1)
+		  console.log("a2",a2)
+		  
+		  //对a2进行更改
+		  a2[4][0]="one";
+		  
+		 console.log("a1",a1)
+		 console.log("a2",a2)
+		  
+		  //对a2三层更改
+		  a2[4][2][0]="three";
+		  
+		  console.log("a1",a1)
+		  console.log("a2",a2)
+		</script>
+	</body>
+	
+</html>

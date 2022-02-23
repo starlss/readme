@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		   body{
+			 
+		   }
+		   span{
+			   display: inline-block;
+			   width: 100px;
+			   height: 40px;
+			   text-align: center;
+			   padding-top: 10px;
+			   font-size: 14px;
+			   font-weight: bold;
+			   cursor: pointer;
+			   border-top-right-radius: 5px;
+			   border-top-left-radius: 5px;
+		   }
+		   .sel{
+			   border-style: none;
+			   border-top: #000 solid 2px;
+			   background-color: #FFFFFF;
+			   color: #000000;
+			   
+		   }
+		   .unsel{
+			   background-color: #ccc;
+			   color: #999;
+			   border-left: #F1F1F1 solid 1px;
+		   }
+		</style>
+	</head>
+	<body>
+			<span class="sel" onclick="tab(this)">待支付</span>
+			<span class="unsel" onclick="tab(this)">待发货</span>
+			<span class="unsel" onclick="tab(this)">待评论</span>
+	        <script>
+			    function tab(obj){
+					//获取所有选项卡
+					var arr=document.querySelectorAll("span");
+					//NodeList forEach方法
+					//什么时候用？当我们需要将类数组对象中
+					//所有的元素访问一遍  就可以使用forEach
+					arr.forEach(function(el){
+						//判断el是否等于obj
+						//如果相等 将其更改为选中状态  
+						if(el==obj){
+							el.className="sel";
+						}else{
+							//不相等  改为未选 中状态 
+							el.className="unsel";
+						}
+					});
+				}
+			</script>
+	</body>
+</html>

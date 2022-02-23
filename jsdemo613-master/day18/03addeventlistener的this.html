@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="this值"  />
+		<script>
+		     var btn=document.querySelector("input");
+			 btn.addEventListener("click",function(){
+				 console.log("el>>>",this)
+			 })
+		</script>
+	</body>
+</html>

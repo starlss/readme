@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="info"></div>
+		<script>
+		   var obj=document.getElementById("info");
+		   
+		   var txt=document.createTextNode("hello");
+		   
+		   //appendChild
+		   obj.appendChild(txt);
+		   //插入数据
+		   txt.insertData(1,'ab');
+		   
+		   //在数据末尾追加数据
+		   txt.appendData(" world");
+		   
+		  // txt.after("!");
+		  // txt.before("lan: ");
+		   
+		   txt.deleteData(1,2)
+		   
+		   //跟数组splice 插入数据相似 
+		  txt.replaceData(1,3,"123")
+		  
+		  //获取节点数据的一部分
+		  var tmp=txt.substringData(1,3)
+		  console.log(tmp)
+		  
+		  //完全替换 
+		//  txt.replaceWith("ok");
+		  
+		  //元素移除文本节点
+		//  obj.remove();
+		console.log(txt.data)
+		   
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            console.log("请输入您的用户名：")
+            var username = prompt("请输入:");
+            switch (username) {
+                case "admin":
+                case "administrator":
+                    console.log("进入管理员系统");
+                    break;
+                 case "guest":
+                    console.log("进入游客系统");
+                    break;
+                 case "user":
+                    console.log("进入会员系统");
+                    break;
+                  default :
+                    console.log("无法进入")
+
+            }
+            console.log("--------end------")
+        </script>
+    </body>
+</html>

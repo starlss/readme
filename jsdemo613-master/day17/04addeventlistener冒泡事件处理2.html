@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="outer" style="width: 200px;height: 200px;background-color: #008000;">
+			
+			<div id="inner" style="width: 100px;height: 100px;background-color: #FF0000;">
+				
+				<div id="tmp" style="width: 50px;height: 50px; background-color: #000000;"></div>
+				
+			</div>
+			
+		</div>
+		
+		<script>
+		    var ourer=document.querySelector("#outer");
+			var inner=document.querySelector("#inner");
+		    var tmp=document.querySelector("#tmp");
+			ourer.addEventListener("click",function(){
+				console.log("--------outer---------")
+			},true)
+			inner.addEventListener("click",function(){
+				console.log("-----------innner--------")
+			},false)
+			
+			tmp.addEventListener("click",function(){
+				console.log("--------tmp-------")
+			},false)
+			// 事件冒泡  由内到外 tmp---outer
+			// 事件捕获  由外到内  inner--tmp
+		</script>
+	</body>
+</html>

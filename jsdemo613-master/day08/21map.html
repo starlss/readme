@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+         var score=[78,65,98,56,64,30];
+       /* var rs= score.map(function(s){
+             if(s>=60)
+               return s;
+         })*/
+         
+         var rs=score.map(function(s){
+             return Math.floor(s/10);
+         })
+         
+         console.log(rs)
+        </script>
+    </body>
+</html>

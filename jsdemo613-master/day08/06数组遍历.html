@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var a=[23,3,23,567,12];
+          // a[20]=23;
+           console.log(a);
+           //for 遍历 
+           for(var i=0;i<a.length;i++){
+               console.log(a[i]);
+           }
+           
+           console.log("-------")
+           
+           // for  in 
+           for(var i in a){
+               console.log(a[i])
+           }
+           
+           console.log("----------")
+           
+           //forEach 遍历
+           a.forEach(function(el,index,arr,o){
+               console.log(el,index)
+           });
+           
+           console.log("-------------")
+           a.forEach(test);
+           
+           function test(el,index){
+               console.log(index,el)
+           }
+           
+           
+           
+        </script>
+    </body>
+</html>

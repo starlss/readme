@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="执行一次" />
+		<script>
+		   var btn=document.querySelector("input");
+		   btn.addEventListener("click",test)
+		   function test(){
+			   console.log("---------once---")
+			   //在btn上  点击过后 移除监听
+			   btn.removeEventListener("click",test);
+		   }
+		</script>
+	</body>
+</html>

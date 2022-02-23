@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var score=[78,65,98,56,64,30];
+           //判断上面一级成绩是否全部及格 
+           var rs=score.every(function(s){
+               return s>=60;
+           });
+           console.log("是否全部及格",rs?"是":"不是");
+           
+           //列出不及格的成绩 
+           var nojg=score.filter(function(s){
+               return s<60;
+           });
+           console.log("不及格的成绩：",nojg)
+        </script>
+    </body>
+</html>

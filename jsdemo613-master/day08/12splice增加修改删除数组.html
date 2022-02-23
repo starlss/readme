@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           var a=[23,345,98,54];
+           console.log("原始数组:",a)
+           //删除 345  98两个元素 
+           a.splice(1,2);
+           console.log("删除后的数组：",a)
+           
+           //修改元素
+           //将23 改成35
+           //将23删除  并在23这个位置新增35 相当于修改
+           a.splice(0,1,35);
+           console.log("替换后的数组：",a)
+           
+           //插入元素 
+           //在数组的末尾插入两个元素 'a'  'b'
+          // a.splice(2,0,'a','b');
+          a.splice(a.length+30,0,'a','b');
+           console.log("插入后的数组:",a)
+           
+           a.splice(-1,0,'two');
+           console.log(a)
+        </script>
+    </body>
+</html>

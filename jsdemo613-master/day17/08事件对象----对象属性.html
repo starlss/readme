@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="事件对象" id="btn" />
+		<script>
+		    var btn=document.getElementById("btn");
+			//属性注册
+			btn.onclick=function(event){
+				event=event || window.event;
+				console.log(">>>>>>>",event)
+			}
+		</script>
+	</body>
+</html>

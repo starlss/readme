@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    请选择文件:<input type="file" onchange="chg(this)">
+    <script>
+        function chg(obj){
+            //获取文件 的绝对路径
+            var path=obj.value; 
+            //查找.的位置 
+            let pos=path.lastIndexOf(".");
+
+           // let ext=path.substring(pos+1);
+
+           //获取长度 
+           let len=path.length;
+
+           let end=len-(pos+1);
+
+
+           let ext=path.substr(pos+1,end);
+
+            console.log("后缀："+ext)
+        }
+    </script>
+</body>
+</html>

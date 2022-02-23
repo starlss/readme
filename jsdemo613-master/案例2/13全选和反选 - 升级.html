@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	.tab{
+		width: 90%;
+		margin: auto;
+		background-color: #ccc;
+		
+	}
+	tr,td{
+		line-height: 28px;
+		font-size: 14px;
+		text-align: center;
+	}
+	.trb{
+		background-color: #eee;
+	}
+	.trw{
+		background-color: #ffffff;
+	}
+	</style>
+	<body>
+		<!--会员列表-->
+		<table class="tab" border="0" cellpadding="0" cellspacing="1">
+			<tr class="trb"> 
+				<td>
+					<input id="selall" type="checkbox" title="全选" onclick="sel(this)" />
+				</td>
+				<td>名称</td>
+				<td>年龄</td>
+			</tr>
+			<tr class="trw">
+				<td>
+					<input type="checkbox" class="item" />
+				</td>
+				<td>张三</td>
+				<td>23</td>
+			</tr>
+			<tr class="trw">
+				<td>
+					<input type="checkbox" class="item"  />
+				</td>
+				<td>李四</td>
+				<td>18</td>
+			</tr>
+			<tr class="trw">
+				<td>
+					<input type="checkbox" class="item" />
+				</td>
+				<td>王五</td>
+				<td>25</td>
+			</tr>
+			
+		</table>
+		
+		<script>
+		    function sel(obj){
+				//获取当前复选框的值
+				var val=obj.checked;
+				//获取所有数据项
+				var arr=document.querySelectorAll(".item");
+				arr.forEach(function(el){
+					el.checked=val;
+				})
+			}
+			//给所有数据选项增加一个事件监听
+			function init(){
+				//获取全选框
+				var obj=document.querySelector("#selall");
+				//获取所有数据项
+				var arr=document.querySelectorAll(".item");
+				arr.forEach(function(el){
+					el.onclick=function(event){
+						//判断当前项是不是选中状态
+						var tmp=event.target;
+						//如果当前项是未选中的
+						if(!tmp.checked){
+							obj.checked=false;
+						}else{
+							//定义一个标志变量 默认代表所有的子数据项都选中了
+							var flag=true;
+							//要遍历所有的数据项，只要一个未选 中的 全选就处理未选 中状态
+							for(var i=0;i<arr.length;i++){
+								var line=arr[i];
+								if(!line.checked){
+									flag=false;
+									break;
+								}
+							}
+							
+							if(flag){
+								obj.checked=true;
+							}else{
+								obj.checked=false;
+							}
+							
+						}
+					}
+				})
+			}
+			
+			//调用初始化方法
+			init();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//   函数的形参   x  ===>   var x  
+		    function  sum(x,y,z){
+				if(!x){
+					throw new Error("缺少必填参数x");
+				}
+				
+				//处理可选参数 
+				//方式一 判断可选参数是否存在 如果不存在 设置一个默认值
+				/*if(y==undefined){
+					y=0;
+				}
+				if(z==undefined){
+					z=0;
+				}*/
+				
+				//方式 二  使用 || 运算 
+				// 如果  ||   左边的表达式为true，则右边的不执行 
+				y= y || 0;  
+				z= z || 0;
+				
+				console.log("参数",x,y,z)
+				var rs=x+y+z;
+				console.log("rs==",rs)
+			}
+			
+			sum(3,null,undefined);
+		</script>
+	</body>
+</html>

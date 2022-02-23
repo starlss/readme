@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+        <script>
+            console.log("欢迎致电10086，请选择服务语言：")
+            var lan=prompt("请选择语言：1 中文  2英文");
+            
+            if(lan==1){
+                console.log("请选择服务： 1 查话费  2 查流量  0 人工")
+                var fw=prompt("请选择服务：");
+                if(fw==1){
+                    console.log("您的话费还有56元");
+                }else if(fw==2){
+                    console.log("您 的流量不多了 ")
+                }else{
+                    console.log("人工忙，请稍后。。。")
+                }
+            }else if(lan==2){
+                console.log("please choose:   1 查话费  2 查流量  0 人工 ")
+            }else{
+                console.log("请重新选择！")
+                lan=prompt("请选择语言：1 中文  2英文");
+                if(lan!=1 && lan!=2)
+                   console.log("请不要骚扰我。。。")
+            }
+            
+        </script>
+	</body>
+</html>

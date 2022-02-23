@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<!--
+		   表格定义： table
+		     直接子元素：  tr  代表一行 
+		-->
+
+		<table border="0" bgcolor="#eee"  cellpadding="0" cellspacing="1" width="90%">
+			<!--第一行  -->
+			<tr bgcolor="#fff" height="40">
+				<!--表头-->
+				<th>序号</th>
+				<th>产品名称</th>
+				<th>所属类别</th>
+				<th>价格</th>
+			</tr>
+          <!--
+		    合并第二行、第三行  的第一列
+		  -->
+			<tr bgcolor="#fff" height="40">
+				<td rowspan="2">1</td>
+				<td>华为手机 </td>
+				<td>手机</td>
+				<td>1999</td>
+			</tr>
+			<tr bgcolor="#fff" height="40">
+				<td>华为手机 </td>
+				<td>手机</td>
+				<td>1999</td>
+			</tr>
+			<!--列合并-->
+			<tr bgcolor="#fff" height="40">
+				<td>3</td>
+				<td     colspan="3">华为手机 </td>
+			</tr>
+			
+
+		</table>
+	</body>
+</html>
